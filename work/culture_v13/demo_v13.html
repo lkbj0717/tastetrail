@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TasteTrail · Find the film that fits</title>
+<style>
+:root{--ink:#272436;--muted:#706c80;--purple:#6b3b92;--teal:#267b75;--line:#e4dfeb;--paper:#fff;--bg:#f7f5fa;--red:#a54448}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:wait;opacity:.6}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #ba9ed7;outline-offset:3px}main{max-width:1180px;margin:auto;padding:28px 28px 42px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 0 24px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;font-weight:750;font-size:19px;letter-spacing:-.5px}.brand svg{width:28px;height:28px}.pill{font-size:12px;padding:5px 11px;border:1px solid var(--line);border-radius:30px;background:white;color:var(--muted)}.hero{padding:34px 0 25px;display:grid;grid-template-columns:1.3fr 1fr;align-items:end;gap:40px}.eyebrow{color:var(--purple);font-size:11px;font-weight:750;letter-spacing:1.8px;text-transform:uppercase}h1{font-size:clamp(31px,4.3vw,49px);line-height:1.12;letter-spacing:-1.8px;margin:10px 0 16px;max-width:650px}h1 em{font-style:normal;color:var(--purple)}h2,h3,p{margin:0}h2{font-size:21px;letter-spacing:-.4px}h3{font-size:15px}p{color:var(--muted)}.intro{max-width:570px;font-size:15px}.flow{display:flex;gap:11px;align-items:center;margin-bottom:4px}.flow span{font-size:12px;line-height:1.45;color:var(--muted)}.flow b{display:block;color:var(--ink);font-size:14px}.flow i{font-style:normal;color:#b4a8c2}.flow .last b{color:var(--teal)}.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px}.panel-header{display:flex;align-items:start;justify-content:space-between;gap:16px;margin-bottom:22px}.sub{font-size:13px;margin-top:5px}.text-button{border:0;background:transparent;color:var(--purple);font-size:13px;padding:4px;white-space:nowrap}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.group-heading{display:flex;align-items:center;gap:9px;margin-bottom:10px}.group-heading small{margin-left:auto;color:var(--muted);font-size:11px}.symbol{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:8px;background:#ede7f5;color:var(--purple);font-size:15px;font-weight:700}.symbol.negative{background:#f4ecec;color:#94646c}.symbol.candidate{background:#e5f2ef;color:var(--teal)}.row{display:flex;gap:7px;margin-bottom:8px;align-items:center}.row-label{width:24px;flex:none;color:#9b92a5;font-size:10px}.film-input{width:100%;min-width:0;flex:1;border:1px solid #ded9e7;border-radius:8px;padding:9px 10px;background:#fdfcfe;font-size:13px;color:var(--ink)}.film-input[aria-invalid=true]{border-color:var(--red);background:#fff8f7}.rating{width:63px;flex:none;padding:9px 5px;border:1px solid #ded9e7;border-radius:8px;background:white;font-size:13px}.candidate-group{border-top:1px solid var(--line);padding-top:16px;margin-top:19px}.candidate-group .film-input{background:#f5fbf9}.runbar{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:18px;margin-top:17px}.primary{border:0;border-radius:9px;padding:12px 22px;background:var(--purple);color:white;font-weight:650;font-size:14px;display:flex;gap:14px;align-items:center;white-space:nowrap}.status{font-size:12px;color:var(--muted);min-height:19px}.status.error{color:var(--red)}.status.busy:before{content:"";display:inline-block;height:9px;width:9px;border:2px solid #ddd0e9;border-top-color:var(--purple);border-radius:50%;margin-right:8px;animation:spin .9s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.footnote{font-size:11px;color:var(--muted);margin-top:13px}.context-line{display:flex;gap:26px;margin:19px 1px 26px}.context-line>div{flex:1;font-size:12px;color:var(--muted)}.context-line b{color:var(--ink);font-weight:650}.results-header{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:15px}.results{margin-top:30px;scroll-margin-top:22px}.comparison{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.result-card{border:1px solid var(--line);border-radius:14px;background:white;padding:21px;min-height:185px;position:relative}.result-card.final{border-color:#91bfb4;background:#f4faf7}.result-card .method{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px;font-weight:650}.method small{font-weight:400;font-size:10px}.method-title{font-size:20px;line-height:1.3;letter-spacing:-.4px;margin:15px 0 10px;color:var(--ink);font-weight:700}.result-card.final .method,.result-card.final .method-title{color:var(--teal)}.explanation{font-size:12px;line-height:1.6}.unavailable{color:var(--muted);font-size:14px;font-weight:400}.result-details{display:grid;grid-template-columns:1fr 1.1fr;gap:17px;margin-top:17px}.mini-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.mini-header .label{font-size:10px;border-radius:5px;padding:2px 6px;background:#f0eaf6;color:var(--purple)}.trace{list-style:none;padding:0;margin:0}.trace li{position:relative;padding:0 0 18px 29px;font-size:12px;overflow-wrap:anywhere}.trace li:before{content:"";width:8px;height:8px;background:#a7c8be;border-radius:50%;position:absolute;left:4px;top:5px}.trace li:not(:last-child):after{content:"";position:absolute;width:1px;top:18px;bottom:4px;left:8px;background:var(--line)}.trace li.failed:before{background:#d09898}.trace strong{display:block;color:var(--ink);font-weight:600}.trace span{font-size:11px;color:var(--muted)}.empty{font-size:12px;color:var(--muted)}.tag-row{padding:10px 0;border-bottom:1px solid #ece8f0}.tag-row:last-child{border-bottom:0}.tag-title{font-size:11px;font-weight:600;margin-bottom:6px;color:var(--ink)}.tag{display:inline-block;padding:3px 8px;border:1px solid #d7e8e0;background:#f4faf7;color:#406e62;border-radius:5px;margin:0 5px 5px 0;font-size:11px}.metric-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 15px}.metric{padding:10px;border-radius:8px;background:#f7f5fa}.metric strong{display:block;font-size:16px;color:var(--ink)}.metric span{font-size:10px;color:var(--muted)}.warnings{margin:15px 0 0;padding:12px 15px;background:#fff7e9;border:1px solid #eaddbd;border-radius:10px;color:#7d653d;font-size:12px}.warnings p{color:inherit}.warnings p+p{margin-top:6px}details{font-size:12px;margin-top:12px}summary{cursor:pointer;color:var(--purple);font-weight:550}pre{font:11px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;padding:13px;background:#f7f5fa;border:1px solid #ece7f1;border-radius:8px;max-height:330px;overflow:auto}.catalog{font-size:12px;max-height:190px;overflow:auto;padding:12px;background:#fbfafd;border-radius:8px;margin-top:8px}.catalog div{padding:3px 0}.research{margin-top:25px;border-top:1px solid var(--line);padding-top:17px}.research summary{color:var(--muted)}footer{border-top:1px solid var(--line);margin-top:26px;padding-top:16px;display:flex;gap:30px;font-size:11px;color:var(--muted)}footer p{flex:1}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}[hidden]{display:none!important}@media(max-width:850px){.hero{grid-template-columns:1fr;gap:22px}.flow{max-width:470px}.result-details{grid-template-columns:1fr}.comparison{gap:9px}.result-card{padding:16px}.method-title{font-size:18px}.context-line{gap:15px}}@media(max-width:600px){main{padding:19px 16px 30px}.topbar{padding-bottom:17px}.pill{font-size:10px}.hero{padding-top:25px}.hero h1{letter-spacing:-1px}.panel{padding:18px}.form-grid,.comparison{grid-template-columns:1fr;gap:16px}.comparison{gap:10px}.result-card{min-height:0}.method-title{margin:10px 0}.panel-header{gap:10px}.panel-header h2{font-size:19px}.runbar{align-items:stretch;flex-direction:column;gap:12px}.primary{justify-content:center}.context-line{flex-direction:column;gap:9px}.results-header{align-items:start;flex-direction:column;gap:6px}.metric-strip{gap:6px}.metric{padding:8px}.metric strong{font-size:14px}footer{flex-direction:column;gap:10px}.row-label{width:20px}.film-input{font-size:12px}.flow{gap:8px}.flow b{font-size:13px}.flow span{font-size:11px}}
+</style>
+</head>
+<body><main>
+<nav class="topbar" aria-label="Header"><div class="brand"><svg viewBox="0 0 30 30" fill="none" aria-hidden="true"><path d="M5 23V7h20M15 7v16" stroke="#6b3b92" stroke-width="3" stroke-linecap="round"/><circle cx="5" cy="23" r="3" fill="#6b3b92"/><circle cx="15" cy="23" r="3" fill="#267b75"/><path d="m21 18 3 3 5-7" stroke="#267b75" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>TasteTrail</div><span class="pill">Cultural preference lab · v13</span></nav>
+<header class="hero"><div><span class="eyebrow">A recommendation with evidence</span><h1>Find the film that fits<br><em>your kind of story.</em></h1><p class="intro">Share what you enjoyed and what you did not. Compare a direct model answer, our Agent, and the Agent with Qloo cultural evidence.</p></div><div class="flow" aria-label="Three comparison methods"><span><b>GLM</b>Direct judgment</span><i aria-hidden="true">→</i><span><b>Agent</b>Preference tools</span><i aria-hidden="true">→</i><span class="last"><b>Agent + Qloo</b>Cultural evidence</span></div></header>
+<section class="panel" aria-labelledby="form-heading"><div class="panel-header"><div><h2 id="form-heading">Start with your movie taste</h2><p class="sub">Five likes, three dislikes, and two new films to choose between.</p></div><button class="text-button" id="reset" type="button" disabled>Reset example ↺</button></div>
+<form id="taste-form"><datalist id="film-options"></datalist><div class="form-grid"><div><div class="group-heading"><span class="symbol" aria-hidden="true">＋</span><h3>Films you enjoyed</h3><small>4 or 5 stars</small></div><div id="likes-fields"></div></div><div><div class="group-heading"><span class="symbol negative" aria-hidden="true">−</span><h3>Films you did not enjoy</h3><small>1 or 2 stars</small></div><div id="dislikes-fields"></div><div class="candidate-group"><div class="group-heading"><span class="symbol candidate" aria-hidden="true">↗</span><h3>Your next film</h3><small>Two candidates</small></div><div id="candidates-fields"></div></div></div></div><div class="runbar"><div><p id="status" class="status" role="status" aria-live="polite">Loading the research catalog…</p><p class="footnote">The example is fictional. It has no known correct answer.</p></div><button id="run" class="primary" type="submit" disabled>Compare all three <span aria-hidden="true">→</span></button></div></form>
+<details><summary>Browse the supported film catalog <span id="catalog-count"></span></summary><p class="sub">This research prototype supports a fixed catalog of 473 historical films. Select an exact title and year from the suggestions.</p><div id="catalog" class="catalog"></div></details></section>
+<div class="context-line"><div><b>Your ratings.</b> Dislikes are useful evidence, not missing data.</div><div><b>External culture.</b> Qloo describes films and cultural associations, not your private thoughts.</div><div><b>A fair comparison.</b> All three versions use the same visible history and candidates.</div></div>
+<section id="results" class="results" hidden aria-labelledby="results-heading"><div class="results-header"><h2 id="results-heading">Three ways to make the choice</h2><span class="pill" id="outcome-label"></span></div><div class="comparison" id="comparison"></div><div id="warnings" class="warnings" role="status" hidden></div><div class="result-details"><section class="panel"><div class="mini-header"><h3>What actually ran</h3><span class="label">Execution trace</span></div><ol class="trace" id="trace"></ol><details><summary>Exact trace returned by the service</summary><pre id="trace-json"></pre></details></section><section class="panel"><div class="mini-header"><h3>The cultural evidence</h3><span class="label">Source: Qloo</span></div><p class="empty" id="evidence-note"></p><div id="tag-cards"></div><details><summary>Full evidence and provenance</summary><pre id="evidence-json"></pre></details></section></div><section class="panel" style="margin-top:17px"><div class="mini-header"><h3>Cost and decision details</h3><span class="label" id="selected-version"></span></div><div class="metric-strip" id="cost-summary"></div><p class="empty">Token counts, cache use, and failures below come from the service response. A three-way comparison can cost more than running the final system alone.</p><details><summary>Reported cost breakdown</summary><pre id="cost-json"></pre></details><details><summary>Scores for the first candidate</summary><p class="sub">These are model decision scores. They are not measured probabilities of your personal satisfaction.</p><pre id="probability-json"></pre></details></section></section>
+<details class="research"><summary>Research scope and confirmation results</summary><p class="sub" id="research-status">Checking for a published confirmation summary…</p><pre id="research-summary" hidden></pre><p class="sub">The offline research task is a two-film preference comparison using held-out public ratings. It does not establish full-catalog recommendation quality, real-user satisfaction, or city itinerary performance.</p></details>
+<footer><p>No names, email addresses, or contact details are needed. Film metadata and the ratings you enter are used to make this comparison.</p><p>Research sources: MovieLens / GroupLens and Qloo. Credentials stay on the server. This local prototype does not publish your inputs.</p></footer>
+</main>
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const METHODS = [['glm','GLM','One direct model answer'],['agent','Agent','Preference tools'],['agent_qloo','Agent + Qloo','Cultural evidence']];
+let filmLookup = new Map(), example = null, activeBody = null;
+const jsonText = value => JSON.stringify(value === undefined ? null : value, null, 2);
+function status(text,kind=''){ $('status').textContent=text; $('status').className='status '+kind; }
+function element(tag,text,className){const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(className)node.className=className;return node;}
+async function getJSON(path){const response=await fetch(path);if(!response.ok)throw Error('Could not load '+path);return response.json();}
+function fillForm(data){
+ for(const [group,count] of [['likes',5],['dislikes',3],['candidates',2]]){
+  const host=$(group+'-fields');host.replaceChildren();
+  for(let i=0;i<count;i++){
+   const movie=data[group][i],row=element('div',undefined,'row');const id=group+'-'+i;
+   row.append(element('span',group==='candidates'?'C0'+(i+1):'0'+(i+1),'row-label'));
+   const label=element('label',(group==='likes'?'Liked film':group==='dislikes'?'Disliked film':'Candidate film')+' '+(i+1),'sr-only');label.htmlFor=id;row.append(label);
+   const input=element('input');input.id=id;input.className='film-input';input.setAttribute('list','film-options');input.setAttribute('autocomplete','off');input.required=true;input.value=movie.title+' ('+movie.year+')';input.addEventListener('input',()=>input.removeAttribute('aria-invalid'));row.append(input);
+   if(group!=='candidates'){
+    const select=element('select');select.className='rating';select.id=id+'-rating';select.setAttribute('aria-label',(group==='likes'?'Liked':'Disliked')+' film '+(i+1)+' rating');
+    for(const score of group==='likes'?[4,5]:[1,2]){const option=element('option',score+' ★');option.value=score;option.selected=score===movie.rating;select.append(option);}row.append(select);
+   }host.append(row);
+  }
+ }
+}
+function readForm(){
+ const body={},seen=new Set();
+ for(const [group,count] of [['likes',5],['dislikes',3],['candidates',2]]){
+  body[group]=[];
+  for(let i=0;i<count;i++){
+   const input=$(group+'-'+i),movie=filmLookup.get(input.value.trim());
+   if(!movie){input.setAttribute('aria-invalid','true');input.focus();throw Error('Please choose a supported film title and year from the suggestions.');}
+   const key=movie.title+'|'+movie.year;
+   if(seen.has(key)){input.setAttribute('aria-invalid','true');input.focus();throw Error('Choose ten distinct films; the candidates must be new to this history.');}
+   seen.add(key);const row={title:movie.title,year:movie.year};if(group!=='candidates')row.rating=Number($(group+'-'+i+'-rating').value);body[group].push(row);
+  }
+ }return body;
+}
+function recommendationText(value){
+ if(typeof value==='string')return value;
+ if(value&&typeof value==='object')return value.title||value.recommendation||value.movie||value.choice||'Result unavailable';
+ return 'Result unavailable';
+}
+function candidateName(value){if(value==='C01'||value==='C02'){const m=activeBody.candidates[value==='C01'?0:1];return m.title;}return value;}
+function renderComparisons(data){
+ $('comparison').replaceChildren();
+ for(const [key,label,subtitle] of METHODS){
+  const value=(data.recommendations||{})[key],card=element('article',undefined,'result-card'+(key==='agent_qloo'?' final':''));
+  const head=element('div',undefined,'method');head.append(element('span',label),element('small',key==='agent_qloo'?(data.configuration_frozen===true?'Final version':'Candidate version'):''));card.append(head);
+  card.append(element('p',candidateName(recommendationText(value)),'method-title'+(!value?' unavailable':'')));
+  const explanation=(value&&typeof value==='object'&&value.explanation)||(data.explanations||{})[key];card.append(element('p',explanation||subtitle,'explanation'));$('comparison').append(card);
+ }
+ const answers=data.recommendations||{},a=recommendationText(answers.agent),q=recommendationText(answers.agent_qloo);
+ $('outcome-label').textContent=!answers.agent||!answers.agent_qloo?'Comparison returned':a===q?'Same choice with Qloo':'Qloo changed the Agent choice';
+}
+function renderTrace(rows){
+ $('trace').replaceChildren();const trace=Array.isArray(rows)?rows:[];
+ if(!trace.length){$('trace').append(element('li','No execution trace was returned.'));return;}
+ for(const row of trace){
+  const item=element('li');
+  if(typeof row==='string')item.append(element('strong',row.replaceAll('_',' ')));
+  else if(row&&typeof row==='object'){
+   const title=row.name||row.step||row.stage||row.tool||row.action||'Recorded step';item.append(element('strong',String(title).replaceAll('_',' ')));
+   const detail=row.detail||row.message||row.description||row.status; if(detail)item.append(element('span',typeof detail==='string'?detail:jsonText(detail)));
+   if(row.error||row.status==='error'||row.status==='failed')item.classList.add('failed');
+  }else item.append(element('strong',String(row)));
+  $('trace').append(item);
+ }
+}
+function findTags(evidence){
+ if(!evidence||typeof evidence!=='object')return null;
+ if(evidence.tags&&typeof evidence.tags==='object')return evidence.tags;
+ for(const key of ['qloo_cultural_evidence','cultural_evidence','metadata','evidence_card','payload','cards']){const tags=findTags(evidence[key]);if(tags)return tags;}
+ return null;
+}
+function evidenceName(id){
+ if(id==='C01'||id==='C02')return id+' · '+activeBody.candidates[id==='C01'?0:1].title;
+ if(/^H0[1-8]$/.test(id)){const h=[...activeBody.likes,...activeBody.dislikes][Number(id.slice(1))-1];return id+' · '+h.title+' · '+h.rating+' ★';}
+ return id;
+}
+function renderEvidence(evidence){
+ $('tag-cards').replaceChildren();const tags=findTags(evidence);
+ if(tags){
+  for(const [id,values] of Object.entries(tags)){
+   const row=element('div',undefined,'tag-row');row.append(element('div',evidenceName(id),'tag-title'));
+   const labels=Array.isArray(values)?values:[];
+   if(!labels.length)row.append(element('span','No source tags available.','empty'));
+   for(const label of labels)row.append(element('span',String(label),'tag'));
+   $('tag-cards').append(row);
+  }
+  $('evidence-note').textContent='Source-provided movie tags help compare style and themes. They are not a statement of your personal preferences.';
+ }else{
+  const block=evidence&&evidence.qloo_cultural_evidence,rows=block&&Array.isArray(block.candidates)?block.candidates:[];
+  if(rows.length){
+   for(const film of rows){const row=element('div',undefined,'tag-row');row.append(element('div',evidenceName(film.candidate_id),'tag-title'));
+    for(const key of ['theme','style','tone'])if(typeof film[key]==='string'&&film[key])row.append(element('p',key[0].toUpperCase()+key.slice(1)+': '+film[key],'explanation'));
+    for(const tag of film.tag_fallback||[])row.append(element('span',String(tag),'tag'));$('tag-cards').append(row);
+   }
+   $('evidence-note').textContent='Qloo describes each candidate’s themes, style, and tone. The reviewer compares these descriptions with the films you rated; a similarity is evidence, not a guaranteed preference.';
+  }else $('evidence-note').textContent=evidence&&Object.keys(evidence).length?'The service returned cultural evidence. Open the full evidence below to inspect its source and content.':'No Qloo evidence was returned. Check the execution trace and warnings for fallback information.';
+ }
+ $('evidence-json').textContent=jsonText(evidence);
+}
+function numberText(value,suffix=''){return typeof value==='number'&&Number.isFinite(value)?value.toLocaleString(undefined,{maximumFractionDigits:2})+suffix:'Not reported';}
+function renderCosts(data){
+ const costs=data.costs||{},final=costs.agent_qloo||costs.final||costs.final_production_cost||costs;
+ const tokens=final.reported_tokens??final.total_tokens??final.model_tokens??final.tokens;
+ const ratio=final.token_ratio??final.total_token_ratio;
+ $('cost-summary').replaceChildren();
+ for(const [value,label] of [[numberText(tokens),'Final system · reported tokens'],[numberText(ratio,'×'),'Token ratio to direct GLM'],[numberText(data.seconds,'s'),'Elapsed response time']]){const box=element('div',undefined,'metric');box.append(element('strong',value),element('span',label));$('cost-summary').append(box);}
+ $('cost-json').textContent=jsonText(costs);$('probability-json').textContent=jsonText(data.probabilities);$('selected-version').textContent=data.selected_version||'Service-selected version';
+}
+function render(data){
+ renderComparisons(data);renderTrace(data.trace);renderEvidence(data.qloo_evidence);renderCosts(data);$('trace-json').textContent=jsonText(data.trace);
+ const warnings=Array.isArray(data.warnings)?data.warnings:[];$('warnings').replaceChildren();$('warnings').hidden=!warnings.length;
+ for(const warning of warnings)$('warnings').append(element('p',typeof warning==='string'?warning:jsonText(warning)));
+ $('results').hidden=false;
+}
+function formatError(detail){if(typeof detail==='string')return detail;if(Array.isArray(detail))return detail.map(x=>x.msg||'Invalid input').join(' ');return 'The comparison could not be completed.';}
+$('taste-form').addEventListener('submit',async event=>{
+ event.preventDefault();let body;try{body=readForm();}catch(error){status(error.message,'error');return;}
+ activeBody=body;$('run').disabled=true;$('reset').disabled=true;$('results').hidden=true;const start=Date.now();status('Comparing your films…','busy');
+ const timer=setInterval(()=>status('Comparing your films… '+Math.round((Date.now()-start)/1000)+'s elapsed','busy'),1000);
+ try{const response=await fetch('/api/compare',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data=await response.json();if(!response.ok)throw Error(formatError(data.detail));render(data);status('Comparison complete'+(typeof data.seconds==='number'?' · '+data.seconds.toFixed(1)+'s':''));$('results').scrollIntoView({behavior:'smooth',block:'start'});}
+ catch(error){status(error.message||'The comparison could not be completed.','error');}
+ finally{clearInterval(timer);$('run').disabled=false;$('reset').disabled=false;}
+});
+$('reset').addEventListener('click',()=>{if(example){fillForm(example);$('results').hidden=true;status('Fictional example restored. Ready to compare.');}});
+Promise.all([getJSON('/api/example'),getJSON('/api/catalog')]).then(([sample,movies])=>{
+ example=sample;for(const movie of movies){const label=movie.title+' ('+movie.year+')';filmLookup.set(label,movie);const option=element('option');option.value=label;$('film-options').append(option);$('catalog').append(element('div',label));}
+ $('catalog-count').textContent='('+movies.length+')';fillForm(example);$('run').disabled=false;$('reset').disabled=false;status('Ready to compare. You can edit the fictional example.');
+}).catch(()=>status('The example or catalog could not be loaded. Check the local server.','error'));
+getJSON('/api/research').then(report=>{$('research-status').textContent=report.message||'No confirmation summary was returned.';if(report.available&&report.summary&&Object.keys(report.summary).length){$('research-summary').hidden=false;$('research-summary').textContent=jsonText(report.summary);}}).catch(()=>$('research-status').textContent='A confirmation summary is not currently available.');
+</script></body></html>

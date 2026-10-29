@@ -1,0 +1,282 @@
+{
+  "work/browser_v13_qa.py": {
+    "bytes": 4105,
+    "sha256": "e455ed19d02938a3a8634c9ff66c0b81e97003cbf85a389d980715fc0f4ab6f2"
+  },
+  "work/culture_v11/.gitignore": {
+    "bytes": 160,
+    "sha256": "b88c35edca3ce5d0062fa71f41c6ffc224512d9e5e1f39e8e2deeb237125bf79"
+  },
+  "work/culture_v11/LICENSE": {
+    "bytes": 1080,
+    "sha256": "a17c1c17a69a0423baeb659a624b54f36a7e21a8050dcb1400c40968492da848"
+  },
+  "work/culture_v11/baseline_snapshot.py": {
+    "bytes": 13862,
+    "sha256": "3824746d8c0f819f7309e8c6c90f119f8d9ce311baf11f827683ee81c133b221"
+  },
+  "work/culture_v11/bootstrap_runtime.py": {
+    "bytes": 2894,
+    "sha256": "d1bf1bcff976615c36845443eb07218824b111cb4c6006d32c45c378e0c6277c"
+  },
+  "work/culture_v11/catalog_movie_ids.json": {
+    "bytes": 4520,
+    "sha256": "80f26e8c3dd34d6dd008ba6d1bf695ec7b916e998f94ec01914815cc4dd3d4c2"
+  },
+  "work/culture_v11/download.py": {
+    "bytes": 935,
+    "sha256": "5e0df1be0fa70cca0d06bc0abd509e6efabfc6071a76443ef25050e359d86df9"
+  },
+  "work/culture_v11/example_request.json": {
+    "bytes": 621,
+    "sha256": "3ed02cebec59d9a7d804e9d15a92edf4ea06c850ac5f0528d8dc674af31f2b65"
+  },
+  "work/culture_v11/identity.py": {
+    "bytes": 935,
+    "sha256": "ec59672f325d9aa9d543f74c1e94b74579afe54ff013e229e03a51dde000cf56"
+  },
+  "work/culture_v11/runtime_common.py": {
+    "bytes": 618,
+    "sha256": "372324a3fc369a65d086c98aff861cbf9fd79d3bef89ca6ca326d48b9cf6d4d7"
+  },
+  "work/culture_v11/src/tastetrail/__init__.py": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "work/culture_v11/src/tastetrail/cluster_tools.py": {
+    "bytes": 1546,
+    "sha256": "ba843a0abe7583fc755a21b2aa95c502727354acf58bc5e15066a049e9f9a512"
+  },
+  "work/culture_v11/src/tastetrail/cohort_base.py": {
+    "bytes": 8146,
+    "sha256": "3f560c45ec7fe0fb2f35fb7371202ce8df1b0f68f4e09246bc7c309365f18076"
+  },
+  "work/culture_v11/src/tastetrail/config.py": {
+    "bytes": 563,
+    "sha256": "6c37ec22f7d33cf0d516ff93364b293e3de81b1472a20803fae8a420a004f74e"
+  },
+  "work/culture_v11/src/tastetrail/fusion.py": {
+    "bytes": 3525,
+    "sha256": "6dc5f89748de997f49b33df5f383be7f4d3ad99fd606ac0a797d5df7a36b6a15"
+  },
+  "work/culture_v11/src/tastetrail/llm.py": {
+    "bytes": 3867,
+    "sha256": "afe112a7ed63c4b87b048c79ea88705762704607e89f52bf071aeff144a45520"
+  },
+  "work/culture_v11/src/tastetrail/model_client.py": {
+    "bytes": 4634,
+    "sha256": "46c30616c8966fbcb7f5a8e75224b88de5b2df2b81873a212428b96a19ca9d35"
+  },
+  "work/culture_v11/src/tastetrail/qloo_http.py": {
+    "bytes": 4322,
+    "sha256": "d4d6ff003e500093309383c7d918388259770dfce0c52cbdd21ca42f026bec53"
+  },
+  "work/culture_v11/tests/test_clusters.py": {
+    "bytes": 1578,
+    "sha256": "7524c2b79c8566822115cfe53c0ea0462c47c2cd27d771cc22b00b03ce157d50"
+  },
+  "work/culture_v11/train_tools.py": {
+    "bytes": 1459,
+    "sha256": "f9a2138a95d628c4af240e91b8777819b92278b419377ebf80deab68b925fec4"
+  },
+  "work/culture_v13/PROTOCOL.txt": {
+    "bytes": 2865,
+    "sha256": "7d8f766a3747577e698db604b331f79a43374cb132c87492b324b18015fc341f"
+  },
+  "work/culture_v13/RUN_GUIDE.txt": {
+    "bytes": 9799,
+    "sha256": "089846bc3974b14316730779232d08612f283eba532581976ecb5822f12ce98f"
+  },
+  "work/culture_v13/affinity_graph.py": {
+    "bytes": 18398,
+    "sha256": "98ceebda35175b4c0049434c4e7a61640bc07d20edd1e1b333c443796502edef"
+  },
+  "work/culture_v13/agent_config.json": {
+    "bytes": 4160,
+    "sha256": "858cdd29c5134c6592d7ae0116a358e97ab01ec3c117c9d2967a3b4ef1279984"
+  },
+  "work/culture_v13/app_v13.py": {
+    "bytes": 5777,
+    "sha256": "bfa18a2de705acbe8e3fabfcb91861982436e2eadbab64b04384e589b7165261"
+  },
+  "work/culture_v13/audit_features.py": {
+    "bytes": 5777,
+    "sha256": "9b73e37ca8dfd758c5c90fdc6a1e77eaa088d05fb6f0c36a809b1ed4657ff7bf"
+  },
+  "work/culture_v13/bootstrap_runtime.py": {
+    "bytes": 20609,
+    "sha256": "5c049861dd7f0d3a747aa8b5a71b9f55aed004ff3f24ed26ebca20e07c1a9efc"
+  },
+  "work/culture_v13/calibrate.py": {
+    "bytes": 5495,
+    "sha256": "519ca1544aa0ef641238c405c059f4d19d021883971d52caaf98cc6dc662b762"
+  },
+  "work/culture_v13/common.py": {
+    "bytes": 4051,
+    "sha256": "c1502e34097d24d564361327dee6fb653db1335a336d1258a4ccc64d514d343b"
+  },
+  "work/culture_v13/compact_cards.py": {
+    "bytes": 5358,
+    "sha256": "bec1fa73f9b99e23e5d940b1a66b20b207a1a1fa4ee792ff5e97bde03bc9780c"
+  },
+  "work/culture_v13/demo_v13.html": {
+    "bytes": 25430,
+    "sha256": "1e9f50c540548c6f828d857db0200ca28c51ed022f9d5941ea54852e36685bcf"
+  },
+  "work/culture_v13/evaluate_confirmation.py": {
+    "bytes": 14569,
+    "sha256": "4ec26e2c348ec89430751c5bab999800915a1685312e625447c08eb19dc8c72d"
+  },
+  "work/culture_v13/evidence_cards.py": {
+    "bytes": 11895,
+    "sha256": "ad59e98c522fcc73c400da0a90b57552f862304d075b3b1d4a2ebdf8986ab505"
+  },
+  "work/culture_v13/feature_tools_v13.py": {
+    "bytes": 14363,
+    "sha256": "c6640752346badc909d771fbf850e74463559d992371de1c0907faacbbefbc74"
+  },
+  "work/culture_v13/graph_models.py": {
+    "bytes": 9886,
+    "sha256": "db378235e640e63c535f6363c7f166972cf38b77ee94e9cddd7007dd9b4769bb"
+  },
+  "work/culture_v13/grouped_qloo.py": {
+    "bytes": 16751,
+    "sha256": "e527342b03b232f2c0049eb91190b711a3cb34ded10d2ed7e5d0360d007887c2"
+  },
+  "work/culture_v13/hierarchical_agent.py": {
+    "bytes": 22996,
+    "sha256": "549f34bf603c8500c26f5cc015e4afcf3744d68fbf02e883d57a0f0165275d50"
+  },
+  "work/culture_v13/hierarchical_repair.py": {
+    "bytes": 12201,
+    "sha256": "1f2606ff86fec6fd78f0781de145f8abd36a9d07efb045e25e455174a9132e4b"
+  },
+  "work/culture_v13/hierarchy_backend.py": {
+    "bytes": 413,
+    "sha256": "e6ee719904af061338e64b0a7052a48cfb1f99b30bf865e34fa491a49e3bc56c"
+  },
+  "work/culture_v13/inference_v13.py": {
+    "bytes": 2816,
+    "sha256": "34d05357a902bc3db46662337e9e4c75b49515c0e5860075bb817fb2b2dbe9bd"
+  },
+  "work/culture_v13/interaction_tools.py": {
+    "bytes": 11677,
+    "sha256": "cea1ac2caa48984232665d0df1f846a270f42dab40bf03bb34f6d88706b6f55a"
+  },
+  "work/culture_v13/learned_culture.py": {
+    "bytes": 13188,
+    "sha256": "cf2028e247d5984ca4f79fef79528439cd32281bc9d4333a4a8b957842c94b0b"
+  },
+  "work/culture_v13/matched_control.py": {
+    "bytes": 4670,
+    "sha256": "0fe3b94b8caf6478c3a22cde7df3eee408ca5e8c44f2b106323767cd49a8c0e2"
+  },
+  "work/culture_v13/metrics_v13.py": {
+    "bytes": 14262,
+    "sha256": "3e165483d2fe469619bafa72ee131208caf1be61f14873b8d9e667679c74b80f"
+  },
+  "work/culture_v13/mixture_tools.py": {
+    "bytes": 18522,
+    "sha256": "4c0212ceea1fcbae9b993bda48681df30d40f734ccdbb419dee13a6a181c6282"
+  },
+  "work/culture_v13/numeric_features.py": {
+    "bytes": 1608,
+    "sha256": "6da06dd232643ead9ccb3ad1d82bf5a0dad8060343e987e6878d8ffd6a83a036"
+  },
+  "work/culture_v13/paced_transport.py": {
+    "bytes": 1412,
+    "sha256": "fc0f9086384228704a69dfe0368422c93d85ab0dc6227715e968b467ef50c628"
+  },
+  "work/culture_v13/requirements-runtime-lock.txt": {
+    "bytes": 490,
+    "sha256": "ebc43f9c664a65307e4e99e475442a5eea9bfa282f1998d3a87ead733782308f"
+  },
+  "work/culture_v13/research/confirmation_data_lock.json": {
+    "bytes": 855,
+    "sha256": "ceb14ca7b285443c72aad944df23c04190154d4ac727de8a619a4673039085ce"
+  },
+  "work/culture_v13/research/confirmation_report.json": {
+    "bytes": 38635,
+    "sha256": "ee873b46d541fdc600d69ce2ccc618f1b32a5d8d71446c1b429b42d9997e6fd4"
+  },
+  "work/culture_v13/research/final_development_selection.json": {
+    "bytes": 3569,
+    "sha256": "e44a85e9cf04de041bcb58c58db2fe1a3e2a8215cca27fcc58c0e97fbbdd8488"
+  },
+  "work/culture_v13/research/formal_lock.json": {
+    "bytes": 9217,
+    "sha256": "6cef367286ce8a27bb2c212ef5f4c72d116c53c43745065a2c50261675e086e1"
+  },
+  "work/culture_v13/run_confirmation.py": {
+    "bytes": 9611,
+    "sha256": "175b3e9c95cdf84eeffe786e2a6327c0c19d13e2a362bcdaf4ff9b5a8df06282"
+  },
+  "work/culture_v13/service_v13.py": {
+    "bytes": 38549,
+    "sha256": "f84696fdf9d5b6b1f36091661afe4b057b7f8006403d83ea04a15f3baa9992ff"
+  },
+  "work/culture_v13/test_affinity_graph.py": {
+    "bytes": 1281,
+    "sha256": "634a669ebf3a593ce1480c39abb6c1d163e5437f573e36eab4a2fb59be39701e"
+  },
+  "work/culture_v13/test_bootstrap_runtime.py": {
+    "bytes": 11423,
+    "sha256": "781755e78950d5e01ee05992ac495b1ed7664573f518a8c24c19a9ebdd667d6f"
+  },
+  "work/culture_v13/test_common.py": {
+    "bytes": 1417,
+    "sha256": "5edce1eee716f4ed2ee34947780ff3f9c18980b5665d9a482bbb04f55f31c4af"
+  },
+  "work/culture_v13/test_confirmation_cost.py": {
+    "bytes": 2821,
+    "sha256": "852a66afab5848874cd7e6937681257a06fa5c1eb4faae5699875d88f2b15b87"
+  },
+  "work/culture_v13/test_evidence_cards.py": {
+    "bytes": 4131,
+    "sha256": "205191a07138099abe838054f15f14b0f2e1e6ec8c075fdae313288649f8444b"
+  },
+  "work/culture_v13/test_feature_tools_v13.py": {
+    "bytes": 7702,
+    "sha256": "91e4e56c0e8cb3eab679605ccda89125bf2d53194fb192be6e7410d4973a2042"
+  },
+  "work/culture_v13/test_grouped_qloo.py": {
+    "bytes": 1380,
+    "sha256": "3bc3f8facde47da00ab19e2acc88aae8def01d39e69a66e6d059181f2ab5520c"
+  },
+  "work/culture_v13/test_hierarchical_agent.py": {
+    "bytes": 12201,
+    "sha256": "fb7054d1aad9222f8bfaf926ff05d2673d7bcf866b9109501a5910b654b76aff"
+  },
+  "work/culture_v13/test_hierarchical_repair.py": {
+    "bytes": 13520,
+    "sha256": "1aa943bac0e5fb416c976b647b8932d952d3a85ab9cdd3d399f896b42df08359"
+  },
+  "work/culture_v13/test_inference.py": {
+    "bytes": 2550,
+    "sha256": "09a7bfda1f8d8e6f54db3277922929704f62ebc4bf0554c9e7ecd768a99bdcb6"
+  },
+  "work/culture_v13/test_interaction_tools.py": {
+    "bytes": 2763,
+    "sha256": "edd73e290f328c30d9152dad69dcbad49cd674499ca63b61a4ae38ccfaaec0c3"
+  },
+  "work/culture_v13/test_learned_culture.py": {
+    "bytes": 1878,
+    "sha256": "d02a22994f674fa73d0f7c649100a3665e0096bca2aea929ee1b6de0888db635"
+  },
+  "work/culture_v13/test_matched_ablation.py": {
+    "bytes": 10965,
+    "sha256": "b41970223adfc04c30366c6f542ff9b49bafcad77141186c21fb881e56f62941"
+  },
+  "work/culture_v13/test_metrics_v13.py": {
+    "bytes": 5944,
+    "sha256": "e1de0fc9f69fd706c99cc87c28a299d1fd19e402ecedbf9026658475b14d0b8a"
+  },
+  "work/culture_v13/test_mixture_tools.py": {
+    "bytes": 2560,
+    "sha256": "85c7eae128dc5235026eac2ca0e2e4eaed70e075d96bf545d8d1c16ffe5fd130"
+  },
+  "work/culture_v13/test_service_v13.py": {
+    "bytes": 19616,
+    "sha256": "a87457b313798a5c6148448aa3e7e5940f38789c1e6d582f160e224d3a216fb3"
+  }
+}

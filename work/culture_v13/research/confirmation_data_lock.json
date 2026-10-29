@@ -1,0 +1,21 @@
+{
+  "created_at": 1792584124.0676205,
+  "seed": 20261028,
+  "n": 100,
+  "eligible": 123,
+  "difficulty": {
+    "ordinary": 20,
+    "shared_genre": 40,
+    "fine_taste": 40
+  },
+  "strict_time_gap": true,
+  "all_previous_1m_case_users_excluded": 519,
+  "background_users": 3640,
+  "selection": "fixed-seed bipartite assignment; independent of model predictions",
+  "private_case_sha": "5e4c8e9df76bfd8946b3b733b254d96178c7243a4f6186483d97df4a27058972",
+  "pool_audit_sha": "9504743e9fb3d124a558cfa138d04425c946e043d515beb9eb0a8859903a6125",
+  "ratings_sha": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f",
+  "prepare_source_sha": "244eb6327887206711402b0a5ac6cbb869171e8055a50463c3399af2b6fd36f8",
+  "protocol_sha": "db5b744b66839a97082079724b875cf41d0f9c8a95cae977dd941eec038f13ec",
+  "selected_people_with_removed_boundary_ties": 44
+}

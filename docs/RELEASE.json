@@ -1,0 +1,18 @@
+{
+  "scope": "Final product, required shared runtime code, deployment and final evaluation evidence. Exploratory literature reviews, alternative design reports and unrelated experiment artifacts are excluded.",
+  "original_confirmation_config_sha256": "fb10700c07f15e048b8a3d0e5f1b2fd10d83f738bb9793190e89c68f06f28817",
+  "public_config_sha256": "858cdd29c5134c6592d7ae0116a358e97ab01ec3c117c9d2967a3b4ef1279984",
+  "retained_models": [
+    "agent_hierarchical_mixture",
+    "qloo_hierarchical_mixture"
+  ],
+  "numerical_parameters_unchanged": true,
+  "prompt_and_inference_source_unchanged": true,
+  "confirmation_metrics_unchanged": true,
+  "provenance_note": "formal_lock.json records the original confirmation snapshot; its original config hash intentionally differs from the curated public configuration. Only selected model entries and the matched no-Qloo control remain in the public configuration. The public protocol summarizes the final evaluation; original protocol/source hashes describe the archived experimental snapshot, not the pruned public tree.",
+  "runtime_helper_extraction": {
+    "runtime_common.py": "Only the shared path constants and JSON read/save helpers were extracted from an earlier experiment runner; bootstrap imports this module.",
+    "matched_control.py": "Final matched-control feature mapping and recalibration functions retained without method-family search."
+  },
+  "historical_replay_cli_included": false
+}

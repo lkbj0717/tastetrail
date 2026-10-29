@@ -1,0 +1,157 @@
+{
+  "selected_agent": "agent_hierarchical_mixture",
+  "selected_qloo": "qloo_hierarchical_mixture",
+  "models": {
+    "agent_hierarchical_mixture": {
+      "features": [
+        "glm_log_odds",
+        "mf_32_10",
+        "community_margin",
+        "bernoulli_k12_cf",
+        "bernoulli_k24_cf",
+        "hier_agent"
+      ],
+      "model": {
+        "scale": [
+          0.9896349618761293,
+          0.7112184279495044,
+          1.2549423107565036,
+          0.5049379631521159,
+          0.4864874039573669,
+          0.8655196584500982
+        ],
+        "weights": [
+          0.4456949763768753,
+          0.6653577797243705,
+          0.27199328840488246,
+          0.2938233761105031,
+          0.14380544094601694,
+          0.3779727426895405
+        ],
+        "ridge": 10.0
+      }
+    },
+    "qloo_hierarchical_mixture": {
+      "features": [
+        "glm_log_odds",
+        "mf_32_10",
+        "community_margin",
+        "bernoulli_k12_qloo",
+        "bernoulli_k24_qloo",
+        "hier_qloo"
+      ],
+      "model": {
+        "scale": [
+          0.9896349618761293,
+          0.7112184279495044,
+          1.2549423107565036,
+          0.47791759114535326,
+          0.4584453394293005,
+          0.8409054951407184
+        ],
+        "weights": [
+          0.36317293001103024,
+          0.6514608433185117,
+          0.28841410676134677,
+          0.28906809349370455,
+          0.1462316396332078,
+          0.506150175494607
+        ],
+        "ridge": 10.0
+      }
+    }
+  },
+  "matched_no_qloo": {
+    "name": "matched_no_qloo",
+    "features": [
+      "glm_log_odds",
+      "mf_32_10",
+      "community_margin",
+      "bernoulli_k12_cf",
+      "bernoulli_k24_cf",
+      "hier_agent"
+    ],
+    "model": {
+      "scale": [
+        0.9896349618761293,
+        0.7112184279495044,
+        1.2549423107565036,
+        0.5049379631521159,
+        0.4864874039573669,
+        0.8655196584500982
+      ],
+      "weights": [
+        0.4456949763768753,
+        0.6653577797243705,
+        0.27199328840488246,
+        0.2938233761105031,
+        0.14380544094601694,
+        0.3779727426895405
+      ],
+      "ridge": 10.0
+    },
+    "source_family": "qloo_hierarchical_mixture",
+    "source_features": [
+      "glm_log_odds",
+      "mf_32_10",
+      "community_margin",
+      "bernoulli_k12_qloo",
+      "bernoulli_k24_qloo",
+      "hier_qloo"
+    ],
+    "feature_mapping": [
+      {
+        "source": "glm_log_odds",
+        "target": "glm_log_odds",
+        "action": "keep"
+      },
+      {
+        "source": "mf_32_10",
+        "target": "mf_32_10",
+        "action": "keep"
+      },
+      {
+        "source": "community_margin",
+        "target": "community_margin",
+        "action": "keep"
+      },
+      {
+        "source": "bernoulli_k12_qloo",
+        "target": "bernoulli_k12_cf",
+        "action": "replace"
+      },
+      {
+        "source": "bernoulli_k24_qloo",
+        "target": "bernoulli_k24_cf",
+        "action": "replace"
+      },
+      {
+        "source": "hier_qloo",
+        "target": "hier_agent",
+        "action": "replace"
+      }
+    ],
+    "reused_from": "agent_hierarchical_mixture",
+    "calibration": "Same D/E-only nested ridge rule and fresh no-Qloo feature scales; exact matching Agent fits reused."
+  },
+  "judge_version": "cards2_paced",
+  "hierarchical_version": "hierarchical_v2_repair",
+  "recovery_policy": {
+    "version": "hierarchical_v2_repair",
+    "trigger": "objective invalid format or truncation only",
+    "max_extra_physical_requests": 1,
+    "reasoning_effort": "low",
+    "max_completion_tokens": 2048,
+    "total_branch_budget_multiplier": 18,
+    "both_branches": true
+  },
+  "selection": "Common nested-ridge development CV; family chosen by log loss. Exploratory development, not an unbiased final estimate.",
+  "fallback": "Unavailable Qloo uses selected no-Qloo fusion with initial-model review margins and no new paid calls; failed review with available Qloo retains initial GLM review margin.",
+  "frozen": true,
+  "service": {
+    "frozen": true,
+    "version": "TasteTrail v13 frozen confirmation",
+    "decision_backend": "fusion",
+    "judge_backend": "hierarchical"
+  }
+}

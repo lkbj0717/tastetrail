@@ -1,0 +1,152 @@
+TasteTrail v13：新服务器部署与私有运行时重建
+
+本指南对应 bootstrap_runtime.py。默认只读检查；只有 --build 才创建缺失资源，
+只有再加 --allow-network 才允许获取 Qloo 公开电影元数据。它不下载评测标签，
+不读取 D/E/C/F/R/N 案例，不重新选择方案，不修改冻结的 agent_config.json。
+重建部署资源与复现历史 API 实验是两回事：Qloo 内容、模型服务和数值环境可能
+变化，新建资源不能自动继承原冻结实验的成绩。
+
+一、目录与 Python 环境
+
+保留源码中 work/culture_v11 与 work/culture_v13 的相邻结构。v13 复用 v11/src
+的 API、协同过滤和融合组件，不能只复制一个 v13 文件夹。
+下面命令从源码根目录执行；当前验证环境为 Linux / Python 3.12.15。
+
+  uv venv --python 3.12 .venv
+  uv pip install --python .venv/bin/python -r work/culture_v13/requirements-runtime-lock.txt
+  export PYTHONPATH="$PWD/work/culture_v13:$PWD/work/culture_v11:$PWD/work/culture_v11/src"
+  export OPENBLAS_NUM_THREADS=2
+
+requirements-runtime-lock.txt 包含最终 Web 服务与离线测试依赖；
+不需要 GPU、PyTorch 或 sklearn。公开版本不包含探索阶段的报告生成工具。
+
+默认私有目录（均不进入公开源码包）：
+  ~/.local/share/tastetrail/culture_v11
+  ~/.local/share/tastetrail/culture_v13
+  ~/.local/share/tastetrail/qloo_cache
+
+引导脚本支持 --v11-private、--private、--cache-dir。服务支持 V13_PRIVATE，
+并从其同级 culture_v11 读取旧资源；自定义部署应保持这两个目录相邻。研究脚本
+common.py 中仍有默认路径，部署自定义目录不意味着所有历史实验脚本都随之迁移。
+
+二、服务器凭证
+
+服务读取环境变量，或 TASTETRAIL_CREDENTIALS 指定的 JSON 文件，默认位置为
+~/.config/tastetrail/credentials.json。文件只放服务器，权限设为 600。所需键：
+  QLOO_API_KEY              你的比赛 API key
+  TASTETRAIL_MODEL_PROVIDER glm
+  GLM_API_KEY               可用模型服务的 key
+  GLM_BASE_URL              https://openclaw-v2.top/llm/v1
+  GLM_MODEL                 glm-5.3-flash
+
+Qloo 请求地址由源码固定为 https://hackathon.api.qloo.com。不要把 key 放到前端、
+命令输出、演示截图或公开仓库。资源重建只在需要查询 Qloo 时使用 Qloo key，不
+调用 GLM，也不消耗模型 token；启动服务后的推荐请求才会调用模型。
+
+三、已有私有资源：先检查，不重新训练
+
+  .venv/bin/python work/culture_v13/bootstrap_runtime.py --check --with-graph
+
+ready=true 表示下列 11 个文件通过存在性、形状和身份对齐检查：
+  culture_v11/catalog.json           473 部电影的公开 Qloo UUID 映射
+  culture_v11/metadata.json          电影名、年份、类型
+  culture_v11/tools.npz              3640 位隔离背景用户的数值工具
+  culture_v13/qloo_metadata.json     经过白名单过滤的公开文化描述与标签
+  culture_v13/qloo_graph_tools.npz   可选的背景校准文化核
+  culture_v13/mixture_tools/bernoulli_k12_plain.npz
+  culture_v13/mixture_tools/bernoulli_k12_cf.npz
+  culture_v13/mixture_tools/bernoulli_k12_qloo.npz
+  culture_v13/mixture_tools/bernoulli_k24_plain.npz
+  culture_v13/mixture_tools/bernoulli_k24_cf.npz
+  culture_v13/mixture_tools/bernoulli_k24_qloo.npz
+
+不需要 qgraph_* 数值特征时可以去掉 --with-graph。检查不创建目录、不读取 key、
+不扫描整个缓存、不联网。当前服务器只读检查结果：473 部目录、3640 背景用户、
+6 份群组权重以及可选图工具齐全；471 部具有丰富文化描述。另两部
+只有已获取的基础元数据，没有生成或补写虚构文化描述。
+
+四、全新服务器：先重建 v11 背景资源
+
+如果 v11 资源缺失，v13 会停止并给出明确提示。先运行已有入口：
+  .venv/bin/python work/culture_v11/download.py
+  .venv/bin/python work/culture_v11/bootstrap_runtime.py
+
+download.py 从 GroupLens 官方下载 MovieLens 1M，保存到私有目录。
+bootstrap_runtime.py 使用公开 catalog_movie_ids.json 固定的 473 个电影 ID，
+按标题/年份核验 Qloo 身份，并按固定随机种子划出 3640 位背景用户构建 tools。
+它通常需要约 473–946 次 Qloo 名称检索；需有效 key。v11 会拒绝覆盖已存在的
+metadata/catalog/tools：若旧构建中断而留下部分文件，先自行备份、选择一个
+新的干净目录再重建，不把冻结资产直接删除或覆盖。
+
+MovieLens 官方来源：https://files.grouplens.org/datasets/movielens/ml-1m.zip
+数据条款随下载的 README 保存。原始评分、用户标识和背景矩阵不随源码公开。
+
+五、补建 v13 文化工具
+
+有完整缓存时，无网络构建：
+  .venv/bin/python work/culture_v13/bootstrap_runtime.py --build --with-graph
+
+新服务器首次获取文化内容：
+  .venv/bin/python work/culture_v13/bootstrap_runtime.py --build --with-graph --allow-network
+
+执行顺序：
+1. 校验 v11 的目录与背景矩阵；不读取任何开发或评测案例。
+2. 优先复用 qloo_cache 的实体响应。若授权联网，对缺少实体/丰富描述的电影按
+   最多 50 个精确 UUID 分块查询 /v2/insights。固定使用目录前两部公共电影作为
+   seed；seed 不出现在同次目标列表，第二个 seed 补查自环及遗漏。请求仅有
+   filter.type、signal.interests.entities、filter.results.entities、take。
+   不发送用户 ID、个人信息、评分、候选答案或完整对话。
+   丰富描述指 audience_identity、style_description、plot_themes_description、
+   emotional_tone_description、genre_description 中至少一项非空。即使缓存已
+   有全部 473 部基础 search 实体，只要没有这些字段，仍会补做 insights 检索。
+   响应按丰富字段数、总文化字段数、标签数、时间比较质量，较差响应不覆盖已
+   保留的条目；不会因为基础 search 有更多时长/国家字段而拒绝有效文化描述。
+3. qloo_metadata.json 仅保留 audit_features.FIELDS 指定的文化属性，以及作品名、
+   年份和标签。明确丢弃 query.affinity、外部平台聚合评分、用户相关字段。
+   原始响应只存在私有缓存；匹配不到的电影列为 missing，绝不编造。若 Qloo
+   没返回全部 473 个实体，不创建残缺的最终元数据文件；保留响应缓存供恢复。
+   如仍缺失，应恢复有授权的完整快照或排查身份解析，不能把遗漏项当成负偏好。
+4. 用相同纯背景公式构建可选文化图；用 fit_mixture / with_graph_prior 构建
+   K=12/24 × plain/CF/Qloo 六份 Bernoulli 权重。>=4 是明确喜欢，<=2 是明确
+   不喜欢；3 分和未评分不是负例。CF 与 Qloo 图都排除候选自环。所有参数固定，
+   不重新调参、不挑开发集赢家。
+5. 缺失文件以 600 权限原子创建。已有文件校验后保留；不会覆盖已有资产。
+   每次构建的输入哈希、训练参数和训练统计记录在私有 runtime_builds/ 下。
+
+全目录丰富元数据获取通常约 11 次逻辑分块请求；Qloo 遗漏会增加第二遍查询。
+已有缓存可减少请求。底层客户端仅对传输/429/5xx 做一次重试；HTTP 错误或缺失
+均会明确报错/记录。真实耗时取决于服务器；本次交付仅进行 mock 网络验证，未
+在现有服务器重新发起这批请求。六份群组权重只需 CPU，不使用模型 token。
+
+已有 qloo_metadata.json 不会因 --allow-network 而刷新。若要更新文化快照，
+应使用新的私有输出目录，并重新验证；只读检查不会把“基础元数据齐全”误说成
+“每部电影都有丰富文化说明”，rich_description_movies 会单独报告覆盖数量。
+basic_only_movie_ids 列出仍只有基础资料的公开电影 ID；即使补查后仍缺少丰富
+描述，也保留经过验证的基础实体，并明确报告覆盖缺口，不生成假的文化描述。
+
+六、离线测试与启动
+
+  .venv/bin/python -m pytest -q work/culture_v13/test_bootstrap_runtime.py
+  .venv/bin/python -m uvicorn app_v13:app --host 127.0.0.1 --port 8773
+
+浏览器打开 http://127.0.0.1:8773。GET /health、/api/catalog 和首页不调用 API；
+POST /api/recommend 给最终推荐，POST /api/compare 返回三版本比较。输入必须为
+目录内 10 部不同电影：5 部喜欢（4/5分）、3 部不喜欢（1/2分）、2 部新候选。
+
+默认加载 culture_v13/agent_config.json；若交付包含另一个已冻结配置，设置
+TASTETRAIL_V13_SERVICE_CONFIG 为该文件的绝对路径。不要自行把研究候选配置
+替换成默认赢家后继续沿用原报告分数。
+
+公网演示需要自行配置 HTTPS/反向代理及访问控制。本引导只启动本机服务，不
+自动公开服务器。API key 和私有响应始终留在后端。
+
+七、可复现范围
+
+本脚本解决“公开源码在新服务器没有私有权重就无法启动”的问题；需具备官方
+MovieLens 下载权限、可用 Qloo 账号与模型服务。它不分发原始评分，也不保证
+上游未来返回完全相同的内容。使用不同资产应保留新哈希，并与原冻结快照区分。
+它不等于重现本机 N100 已记录的 API 响应。模型代理即使仍使用同一模型别名，
+底层部署也可能变化；实时 Qloo 数据也可能漂移。重跑服务不能宣称逐条复现历史
+输出或原报告分数；本脚本不会打开 N100 输入、答案或原始 API 记录。
+完整评测复现还需要对应研究输入/划分和冻结 API 响应；它们不是本部署入口的
+依赖。服务和数值工具不会为了推荐而读取目标用户隐藏评分。

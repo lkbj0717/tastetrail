@@ -1,0 +1,1176 @@
+{
+  "total_cases": 100,
+  "methods": {
+    "glm": {
+      "correct": 63,
+      "total": 100,
+      "accuracy": 0.63,
+      "wilson_95": [
+        0.5322052958094291,
+        0.7181763946567546
+      ],
+      "valid": 100,
+      "missing_rows": 0,
+      "invalid_answers": 0,
+      "by_difficulty": {
+        "fine_taste": {
+          "correct": 24,
+          "total": 40,
+          "accuracy": 0.6,
+          "wilson_95": [
+            0.44595893660346186,
+            0.7365167431570808
+          ],
+          "valid": 40,
+          "missing_rows": 0,
+          "invalid_answers": 0
+        },
+        "ordinary": {
+          "correct": 11,
+          "total": 20,
+          "accuracy": 0.55,
+          "wilson_95": [
+            0.34208534245034233,
+            0.7418021417443759
+          ],
+          "valid": 20,
+          "missing_rows": 0,
+          "invalid_answers": 0
+        },
+        "shared_genre": {
+          "correct": 28,
+          "total": 40,
+          "accuracy": 0.7,
+          "wilson_95": [
+            0.5456998118185507,
+            0.8192515477025347
+          ],
+          "valid": 40,
+          "missing_rows": 0,
+          "invalid_answers": 0
+        }
+      },
+      "tokens": {
+        "reported": {
+          "kind": "completely_reported",
+          "total_cases": 100,
+          "known_numerator_cases": 100,
+          "unknown_numerator_cases": 0,
+          "known_baseline_cases": 100,
+          "zero_baseline_cases": 0,
+          "total_tokens": 147143,
+          "sum_known_token_counts": 147143,
+          "observed_reported_tokens_including_partial": 147143,
+          "full_baseline_reported_tokens": 147143,
+          "aggregate_ratio": 1.0,
+          "max_ratio": 1.0,
+          "count_over_3x": 0,
+          "count_over_10x": 0,
+          "count_at_least_20x": 0,
+          "known_pairs_only": {
+            "n": 100,
+            "aggregate_ratio": 1.0,
+            "max_ratio": 1.0,
+            "count_over_3x": 0,
+            "count_over_10x": 0,
+            "count_at_least_20x": 0
+          },
+          "interpretation": "Incomplete usage is unknown. Known-pairs statistics do not represent all cases."
+        },
+        "upper_bound": {
+          "kind": "conservative_upper_bound",
+          "total_cases": 100,
+          "known_numerator_cases": 100,
+          "unknown_numerator_cases": 0,
+          "known_baseline_cases": 100,
+          "zero_baseline_cases": 0,
+          "total_tokens": 147143,
+          "sum_known_token_counts": 147143,
+          "observed_reported_tokens_including_partial": 147143,
+          "full_baseline_reported_tokens": 147143,
+          "aggregate_ratio": 1.0,
+          "max_ratio": 1.0,
+          "count_over_3x": 0,
+          "count_over_10x": 0,
+          "count_at_least_20x": 0,
+          "known_pairs_only": {
+            "n": 100,
+            "aggregate_ratio": 1.0,
+            "max_ratio": 1.0,
+            "count_over_3x": 0,
+            "count_over_10x": 0,
+            "count_at_least_20x": 0
+          },
+          "interpretation": "Upper bounds include reserved allowances for unknown usage; not actual billable cost."
+        }
+      }
+    },
+    "agent": {
+      "correct": 68,
+      "total": 100,
+      "accuracy": 0.68,
+      "wilson_95": [
+        0.5833738138954762,
+        0.7633085267500092
+      ],
+      "valid": 100,
+      "missing_rows": 0,
+      "invalid_answers": 0,
+      "by_difficulty": {
+        "fine_taste": {
+          "correct": 24,
+          "total": 40,
+          "accuracy": 0.6,
+          "wilson_95": [
+            0.44595893660346186,
+            0.7365167431570808
+          ],
+          "valid": 40,
+          "missing_rows": 0,
+          "invalid_answers": 0
+        },
+        "ordinary": {
+          "correct": 11,
+          "total": 20,
+          "accuracy": 0.55,
+          "wilson_95": [
+            0.34208534245034233,
+            0.7418021417443759
+          ],
+          "valid": 20,
+          "missing_rows": 0,
+          "invalid_answers": 0
+        },
+        "shared_genre": {
+          "correct": 33,
+          "total": 40,
+          "accuracy": 0.825,
+          "wilson_95": [
+            0.6805000966821229,
+            0.9125458625396408
+          ],
+          "valid": 40,
+          "missing_rows": 0,
+          "invalid_answers": 0
+        }
+      },
+      "tokens": {
+        "reported": {
+          "kind": "completely_reported",
+          "total_cases": 100,
+          "known_numerator_cases": 100,
+          "unknown_numerator_cases": 0,
+          "known_baseline_cases": 100,
+          "zero_baseline_cases": 0,
+          "total_tokens": 690938,
+          "sum_known_token_counts": 690938,
+          "observed_reported_tokens_including_partial": 690938,
+          "full_baseline_reported_tokens": 147143,
+          "aggregate_ratio": 4.695690586708168,
+          "max_ratio": 11.11111111111111,
+          "count_over_3x": 95,
+          "count_over_10x": 2,
+          "count_at_least_20x": 0,
+          "known_pairs_only": {
+            "n": 100,
+            "aggregate_ratio": 4.695690586708168,
+            "max_ratio": 11.11111111111111,
+            "count_over_3x": 95,
+            "count_over_10x": 2,
+            "count_at_least_20x": 0
+          },
+          "interpretation": "Incomplete usage is unknown. Known-pairs statistics do not represent all cases."
+        },
+        "upper_bound": {
+          "kind": "conservative_upper_bound",
+          "total_cases": 100,
+          "known_numerator_cases": 100,
+          "unknown_numerator_cases": 0,
+          "known_baseline_cases": 100,
+          "zero_baseline_cases": 0,
+          "total_tokens": 690938,
+          "sum_known_token_counts": 690938,
+          "observed_reported_tokens_including_partial": 690938,
+          "full_baseline_reported_tokens": 147143,
+          "aggregate_ratio": 4.695690586708168,
+          "max_ratio": 11.11111111111111,
+          "count_over_3x": 95,
+          "count_over_10x": 2,
+          "count_at_least_20x": 0,
+          "known_pairs_only": {
+            "n": 100,
+            "aggregate_ratio": 4.695690586708168,
+            "max_ratio": 11.11111111111111,
+            "count_over_3x": 95,
+            "count_over_10x": 2,
+            "count_at_least_20x": 0
+          },
+          "interpretation": "Upper bounds include reserved allowances for unknown usage; not actual billable cost."
+        }
+      }
+    },
+    "agent_qloo": {
+      "correct": 70,
+      "total": 100,
+      "accuracy": 0.7,
+      "wilson_95": [
+        0.6041514536665332,
+        0.7810511470506724
+      ],
+      "valid": 100,
+      "missing_rows": 0,
+      "invalid_answers": 0,
+      "by_difficulty": {
+        "fine_taste": {
+          "correct": 27,
+          "total": 40,
+          "accuracy": 0.675,
+          "wilson_95": [
+            0.5201774618987768,
+            0.799154977682173
+          ],
+          "valid": 40,
+          "missing_rows": 0,
+          "invalid_answers": 0
+        },
+        "ordinary": {
+          "correct": 11,
+          "total": 20,
+          "accuracy": 0.55,
+          "wilson_95": [
+            0.34208534245034233,
+            0.7418021417443759
+          ],
+          "valid": 20,
+          "missing_rows": 0,
+          "invalid_answers": 0
+        },
+        "shared_genre": {
+          "correct": 32,
+          "total": 40,
+          "accuracy": 0.8,
+          "wilson_95": [
+            0.652426936536005,
+            0.895000102745623
+          ],
+          "valid": 40,
+          "missing_rows": 0,
+          "invalid_answers": 0
+        }
+      },
+      "tokens": {
+        "reported": {
+          "kind": "completely_reported",
+          "total_cases": 100,
+          "known_numerator_cases": 99,
+          "unknown_numerator_cases": 1,
+          "known_baseline_cases": 100,
+          "zero_baseline_cases": 0,
+          "total_tokens": null,
+          "sum_known_token_counts": 885320,
+          "observed_reported_tokens_including_partial": 891311,
+          "full_baseline_reported_tokens": 147143,
+          "aggregate_ratio": null,
+          "max_ratio": null,
+          "count_over_3x": null,
+          "count_over_10x": null,
+          "count_at_least_20x": null,
+          "known_pairs_only": {
+            "n": 99,
+            "aggregate_ratio": 6.069780675593218,
+            "max_ratio": 12.155107187894073,
+            "count_over_3x": 99,
+            "count_over_10x": 1,
+            "count_at_least_20x": 0
+          },
+          "interpretation": "Incomplete usage is unknown. Known-pairs statistics do not represent all cases."
+        },
+        "upper_bound": {
+          "kind": "conservative_upper_bound",
+          "total_cases": 100,
+          "known_numerator_cases": 100,
+          "unknown_numerator_cases": 0,
+          "known_baseline_cases": 100,
+          "zero_baseline_cases": 0,
+          "total_tokens": 891311,
+          "sum_known_token_counts": 891311,
+          "observed_reported_tokens_including_partial": 891311,
+          "full_baseline_reported_tokens": 147143,
+          "aggregate_ratio": 6.057447517041245,
+          "max_ratio": 12.155107187894073,
+          "count_over_3x": 100,
+          "count_over_10x": 1,
+          "count_at_least_20x": 0,
+          "known_pairs_only": {
+            "n": 100,
+            "aggregate_ratio": 6.057447517041245,
+            "max_ratio": 12.155107187894073,
+            "count_over_3x": 100,
+            "count_over_10x": 1,
+            "count_at_least_20x": 0
+          },
+          "interpretation": "Upper bounds include reserved allowances for unknown usage; not actual billable cost."
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "before": "glm",
+      "after": "agent",
+      "total": 100,
+      "helped": 11,
+      "hurt": 6,
+      "unchanged": 83,
+      "accuracy_difference": 0.05,
+      "difference_percentage_points": 5.0,
+      "exact_mcnemar_p_two_sided": 0.332305908203125,
+      "paired_bootstrap_95": [
+        -0.03,
+        0.13
+      ],
+      "paired_bootstrap_95_percentage_points": [
+        -3.0,
+        13.0
+      ]
+    },
+    {
+      "before": "agent",
+      "after": "agent_qloo",
+      "total": 100,
+      "helped": 3,
+      "hurt": 1,
+      "unchanged": 96,
+      "accuracy_difference": 0.02,
+      "difference_percentage_points": 2.0,
+      "exact_mcnemar_p_two_sided": 0.625,
+      "paired_bootstrap_95": [
+        -0.02,
+        0.06
+      ],
+      "paired_bootstrap_95_percentage_points": [
+        -2.0,
+        6.0
+      ]
+    },
+    {
+      "before": "glm",
+      "after": "agent_qloo",
+      "total": 100,
+      "helped": 12,
+      "hurt": 5,
+      "unchanged": 83,
+      "accuracy_difference": 0.07,
+      "difference_percentage_points": 7.0,
+      "exact_mcnemar_p_two_sided": 0.143463134765625,
+      "paired_bootstrap_95": [
+        -0.01,
+        0.15
+      ],
+      "paired_bootstrap_95_percentage_points": [
+        -1.0,
+        15.0
+      ]
+    }
+  ],
+  "confidence_level": 0.95,
+  "bootstrap_seed": 20261028,
+  "bootstrap_samples": 10000,
+  "cost_baseline_method": "glm",
+  "full_denominator_policy": "missing and invalid answers are incorrect; unknown token usage is not zero",
+  "inference_limitations": [
+    "Wilson/paired bootstrap assume case-level independent users.",
+    "No multiple-comparison correction; primary comparisons must be prespecified."
+  ],
+  "ablation": {
+    "status": "complete",
+    "description": "Matched mechanism with Qloo removed or replaced by CF; independently recalibrated on D/E using the same nested ridge rule before confirmation.",
+    "kind": "development_recalibrated_matched_no_qloo",
+    "configuration": {
+      "name": "matched_no_qloo",
+      "features": [
+        "glm_log_odds",
+        "mf_32_10",
+        "community_margin",
+        "bernoulli_k12_cf",
+        "bernoulli_k24_cf",
+        "hier_agent"
+      ],
+      "selection": {
+        "name": "matched_no_qloo",
+        "features": [
+          "glm_log_odds",
+          "mf_32_10",
+          "community_margin",
+          "bernoulli_k12_cf",
+          "bernoulli_k24_cf",
+          "hier_agent"
+        ],
+        "correct": 171,
+        "total": 219,
+        "accuracy": 0.7808219178082192,
+        "log_loss": 0.4629093950592219,
+        "inner_ridges": [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0
+        ],
+        "uses_qloo": false,
+        "uses_judge": false,
+        "uses_hierarchical": true,
+        "aggregate_token_upper_ratio": 4.796023564064801,
+        "maximum_token_upper_ratio": 10.77337559429477,
+        "budget_eligible": true,
+        "conditional_on_selected_qloo_family": true,
+        "confirmation_used": false
+      },
+      "source_family": "qloo_hierarchical_mixture",
+      "source_features": [
+        "glm_log_odds",
+        "mf_32_10",
+        "community_margin",
+        "bernoulli_k12_qloo",
+        "bernoulli_k24_qloo",
+        "hier_qloo"
+      ],
+      "feature_mapping": [
+        {
+          "source": "glm_log_odds",
+          "target": "glm_log_odds",
+          "action": "keep"
+        },
+        {
+          "source": "mf_32_10",
+          "target": "mf_32_10",
+          "action": "keep"
+        },
+        {
+          "source": "community_margin",
+          "target": "community_margin",
+          "action": "keep"
+        },
+        {
+          "source": "bernoulli_k12_qloo",
+          "target": "bernoulli_k12_cf",
+          "action": "replace"
+        },
+        {
+          "source": "bernoulli_k24_qloo",
+          "target": "bernoulli_k24_cf",
+          "action": "replace"
+        },
+        {
+          "source": "hier_qloo",
+          "target": "hier_agent",
+          "action": "replace"
+        }
+      ],
+      "reused_from": "agent_hierarchical_mixture",
+      "calibration": "Same D/E-only nested ridge rule and fresh no-Qloo feature scales; exact matching Agent fits reused.",
+      "development_status": "Exploratory: mechanism conditional on the development-selected Qloo family."
+    },
+    "metrics": {
+      "total_cases": 100,
+      "methods": {
+        "without_qloo": {
+          "correct": 68,
+          "total": 100,
+          "accuracy": 0.68,
+          "wilson_95": [
+            0.5833738138954762,
+            0.7633085267500092
+          ],
+          "valid": 100,
+          "missing_rows": 0,
+          "invalid_answers": 0,
+          "by_difficulty": {
+            "fine_taste": {
+              "correct": 24,
+              "total": 40,
+              "accuracy": 0.6,
+              "wilson_95": [
+                0.44595893660346186,
+                0.7365167431570808
+              ],
+              "valid": 40,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            },
+            "ordinary": {
+              "correct": 11,
+              "total": 20,
+              "accuracy": 0.55,
+              "wilson_95": [
+                0.34208534245034233,
+                0.7418021417443759
+              ],
+              "valid": 20,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            },
+            "shared_genre": {
+              "correct": 33,
+              "total": 40,
+              "accuracy": 0.825,
+              "wilson_95": [
+                0.6805000966821229,
+                0.9125458625396408
+              ],
+              "valid": 40,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            }
+          },
+          "tokens": {
+            "reported": {
+              "kind": "completely_reported",
+              "total_cases": 100,
+              "known_numerator_cases": 100,
+              "unknown_numerator_cases": 0,
+              "known_baseline_cases": 100,
+              "zero_baseline_cases": 0,
+              "total_tokens": 690938,
+              "sum_known_token_counts": 690938,
+              "observed_reported_tokens_including_partial": 690938,
+              "full_baseline_reported_tokens": 690938,
+              "aggregate_ratio": 1.0,
+              "max_ratio": 1.0,
+              "count_over_3x": 0,
+              "count_over_10x": 0,
+              "count_at_least_20x": 0,
+              "known_pairs_only": {
+                "n": 100,
+                "aggregate_ratio": 1.0,
+                "max_ratio": 1.0,
+                "count_over_3x": 0,
+                "count_over_10x": 0,
+                "count_at_least_20x": 0
+              },
+              "interpretation": "Incomplete usage is unknown. Known-pairs statistics do not represent all cases."
+            },
+            "upper_bound": {
+              "kind": "conservative_upper_bound",
+              "total_cases": 100,
+              "known_numerator_cases": 100,
+              "unknown_numerator_cases": 0,
+              "known_baseline_cases": 100,
+              "zero_baseline_cases": 0,
+              "total_tokens": 690938,
+              "sum_known_token_counts": 690938,
+              "observed_reported_tokens_including_partial": 690938,
+              "full_baseline_reported_tokens": 690938,
+              "aggregate_ratio": 1.0,
+              "max_ratio": 1.0,
+              "count_over_3x": 0,
+              "count_over_10x": 0,
+              "count_at_least_20x": 0,
+              "known_pairs_only": {
+                "n": 100,
+                "aggregate_ratio": 1.0,
+                "max_ratio": 1.0,
+                "count_over_3x": 0,
+                "count_over_10x": 0,
+                "count_at_least_20x": 0
+              },
+              "interpretation": "Upper bounds include reserved allowances for unknown usage; not actual billable cost."
+            }
+          }
+        },
+        "with_qloo": {
+          "correct": 70,
+          "total": 100,
+          "accuracy": 0.7,
+          "wilson_95": [
+            0.6041514536665332,
+            0.7810511470506724
+          ],
+          "valid": 100,
+          "missing_rows": 0,
+          "invalid_answers": 0,
+          "by_difficulty": {
+            "fine_taste": {
+              "correct": 27,
+              "total": 40,
+              "accuracy": 0.675,
+              "wilson_95": [
+                0.5201774618987768,
+                0.799154977682173
+              ],
+              "valid": 40,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            },
+            "ordinary": {
+              "correct": 11,
+              "total": 20,
+              "accuracy": 0.55,
+              "wilson_95": [
+                0.34208534245034233,
+                0.7418021417443759
+              ],
+              "valid": 20,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            },
+            "shared_genre": {
+              "correct": 32,
+              "total": 40,
+              "accuracy": 0.8,
+              "wilson_95": [
+                0.652426936536005,
+                0.895000102745623
+              ],
+              "valid": 40,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            }
+          },
+          "tokens": {
+            "reported": {
+              "kind": "completely_reported",
+              "total_cases": 100,
+              "known_numerator_cases": 99,
+              "unknown_numerator_cases": 1,
+              "known_baseline_cases": 100,
+              "zero_baseline_cases": 0,
+              "total_tokens": null,
+              "sum_known_token_counts": 885320,
+              "observed_reported_tokens_including_partial": 891311,
+              "full_baseline_reported_tokens": 690938,
+              "aggregate_ratio": null,
+              "max_ratio": null,
+              "count_over_3x": null,
+              "count_over_10x": null,
+              "count_at_least_20x": null,
+              "known_pairs_only": {
+                "n": 99,
+                "aggregate_ratio": 1.296813043713902,
+                "max_ratio": 2.816963466128144,
+                "count_over_3x": 0,
+                "count_over_10x": 0,
+                "count_at_least_20x": 0
+              },
+              "interpretation": "Incomplete usage is unknown. Known-pairs statistics do not represent all cases."
+            },
+            "upper_bound": {
+              "kind": "conservative_upper_bound",
+              "total_cases": 100,
+              "known_numerator_cases": 100,
+              "unknown_numerator_cases": 0,
+              "known_baseline_cases": 100,
+              "zero_baseline_cases": 0,
+              "total_tokens": 891311,
+              "sum_known_token_counts": 891311,
+              "observed_reported_tokens_including_partial": 891311,
+              "full_baseline_reported_tokens": 690938,
+              "aggregate_ratio": 1.2900014183617055,
+              "max_ratio": 2.816963466128144,
+              "count_over_3x": 0,
+              "count_over_10x": 0,
+              "count_at_least_20x": 0,
+              "known_pairs_only": {
+                "n": 100,
+                "aggregate_ratio": 1.2900014183617055,
+                "max_ratio": 2.816963466128144,
+                "count_over_3x": 0,
+                "count_over_10x": 0,
+                "count_at_least_20x": 0
+              },
+              "interpretation": "Upper bounds include reserved allowances for unknown usage; not actual billable cost."
+            }
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "before": "without_qloo",
+          "after": "with_qloo",
+          "total": 100,
+          "helped": 3,
+          "hurt": 1,
+          "unchanged": 96,
+          "accuracy_difference": 0.02,
+          "difference_percentage_points": 2.0,
+          "exact_mcnemar_p_two_sided": 0.625,
+          "paired_bootstrap_95": [
+            -0.02,
+            0.06
+          ],
+          "paired_bootstrap_95_percentage_points": [
+            -2.0,
+            6.0
+          ]
+        }
+      ],
+      "confidence_level": 0.95,
+      "bootstrap_seed": 20261028,
+      "bootstrap_samples": 10000,
+      "cost_baseline_method": "without_qloo",
+      "full_denominator_policy": "missing and invalid answers are incorrect; unknown token usage is not zero",
+      "inference_limitations": [
+        "Wilson/paired bootstrap assume case-level independent users.",
+        "No multiple-comparison correction; primary comparisons must be prespecified."
+      ]
+    }
+  },
+  "secondary_fixed_weight_ablation": {
+    "status": "complete",
+    "description": "Secondary diagnostic only: fixed Qloo fusion weights/scales, matched no-Qloo review and CF substitution, affinity evidence removed; susceptible to distribution shift.",
+    "kind": "fixed_weight_distribution_shift_diagnostic",
+    "metrics": {
+      "total_cases": 100,
+      "methods": {
+        "without_qloo": {
+          "correct": 68,
+          "total": 100,
+          "accuracy": 0.68,
+          "wilson_95": [
+            0.5833738138954762,
+            0.7633085267500092
+          ],
+          "valid": 100,
+          "missing_rows": 0,
+          "invalid_answers": 0,
+          "by_difficulty": {
+            "fine_taste": {
+              "correct": 25,
+              "total": 40,
+              "accuracy": 0.625,
+              "wilson_95": [
+                0.47032439137301096,
+                0.7577702083276673
+              ],
+              "valid": 40,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            },
+            "ordinary": {
+              "correct": 11,
+              "total": 20,
+              "accuracy": 0.55,
+              "wilson_95": [
+                0.34208534245034233,
+                0.7418021417443759
+              ],
+              "valid": 20,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            },
+            "shared_genre": {
+              "correct": 32,
+              "total": 40,
+              "accuracy": 0.8,
+              "wilson_95": [
+                0.652426936536005,
+                0.895000102745623
+              ],
+              "valid": 40,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            }
+          },
+          "tokens": {
+            "reported": {
+              "kind": "completely_reported",
+              "total_cases": 100,
+              "known_numerator_cases": 100,
+              "unknown_numerator_cases": 0,
+              "known_baseline_cases": 100,
+              "zero_baseline_cases": 0,
+              "total_tokens": 690938,
+              "sum_known_token_counts": 690938,
+              "observed_reported_tokens_including_partial": 690938,
+              "full_baseline_reported_tokens": 690938,
+              "aggregate_ratio": 1.0,
+              "max_ratio": 1.0,
+              "count_over_3x": 0,
+              "count_over_10x": 0,
+              "count_at_least_20x": 0,
+              "known_pairs_only": {
+                "n": 100,
+                "aggregate_ratio": 1.0,
+                "max_ratio": 1.0,
+                "count_over_3x": 0,
+                "count_over_10x": 0,
+                "count_at_least_20x": 0
+              },
+              "interpretation": "Incomplete usage is unknown. Known-pairs statistics do not represent all cases."
+            },
+            "upper_bound": {
+              "kind": "conservative_upper_bound",
+              "total_cases": 100,
+              "known_numerator_cases": 100,
+              "unknown_numerator_cases": 0,
+              "known_baseline_cases": 100,
+              "zero_baseline_cases": 0,
+              "total_tokens": 690938,
+              "sum_known_token_counts": 690938,
+              "observed_reported_tokens_including_partial": 690938,
+              "full_baseline_reported_tokens": 690938,
+              "aggregate_ratio": 1.0,
+              "max_ratio": 1.0,
+              "count_over_3x": 0,
+              "count_over_10x": 0,
+              "count_at_least_20x": 0,
+              "known_pairs_only": {
+                "n": 100,
+                "aggregate_ratio": 1.0,
+                "max_ratio": 1.0,
+                "count_over_3x": 0,
+                "count_over_10x": 0,
+                "count_at_least_20x": 0
+              },
+              "interpretation": "Upper bounds include reserved allowances for unknown usage; not actual billable cost."
+            }
+          }
+        },
+        "with_qloo": {
+          "correct": 70,
+          "total": 100,
+          "accuracy": 0.7,
+          "wilson_95": [
+            0.6041514536665332,
+            0.7810511470506724
+          ],
+          "valid": 100,
+          "missing_rows": 0,
+          "invalid_answers": 0,
+          "by_difficulty": {
+            "fine_taste": {
+              "correct": 27,
+              "total": 40,
+              "accuracy": 0.675,
+              "wilson_95": [
+                0.5201774618987768,
+                0.799154977682173
+              ],
+              "valid": 40,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            },
+            "ordinary": {
+              "correct": 11,
+              "total": 20,
+              "accuracy": 0.55,
+              "wilson_95": [
+                0.34208534245034233,
+                0.7418021417443759
+              ],
+              "valid": 20,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            },
+            "shared_genre": {
+              "correct": 32,
+              "total": 40,
+              "accuracy": 0.8,
+              "wilson_95": [
+                0.652426936536005,
+                0.895000102745623
+              ],
+              "valid": 40,
+              "missing_rows": 0,
+              "invalid_answers": 0
+            }
+          },
+          "tokens": {
+            "reported": {
+              "kind": "completely_reported",
+              "total_cases": 100,
+              "known_numerator_cases": 99,
+              "unknown_numerator_cases": 1,
+              "known_baseline_cases": 100,
+              "zero_baseline_cases": 0,
+              "total_tokens": null,
+              "sum_known_token_counts": 885320,
+              "observed_reported_tokens_including_partial": 891311,
+              "full_baseline_reported_tokens": 690938,
+              "aggregate_ratio": null,
+              "max_ratio": null,
+              "count_over_3x": null,
+              "count_over_10x": null,
+              "count_at_least_20x": null,
+              "known_pairs_only": {
+                "n": 99,
+                "aggregate_ratio": 1.296813043713902,
+                "max_ratio": 2.816963466128144,
+                "count_over_3x": 0,
+                "count_over_10x": 0,
+                "count_at_least_20x": 0
+              },
+              "interpretation": "Incomplete usage is unknown. Known-pairs statistics do not represent all cases."
+            },
+            "upper_bound": {
+              "kind": "conservative_upper_bound",
+              "total_cases": 100,
+              "known_numerator_cases": 100,
+              "unknown_numerator_cases": 0,
+              "known_baseline_cases": 100,
+              "zero_baseline_cases": 0,
+              "total_tokens": 891311,
+              "sum_known_token_counts": 891311,
+              "observed_reported_tokens_including_partial": 891311,
+              "full_baseline_reported_tokens": 690938,
+              "aggregate_ratio": 1.2900014183617055,
+              "max_ratio": 2.816963466128144,
+              "count_over_3x": 0,
+              "count_over_10x": 0,
+              "count_at_least_20x": 0,
+              "known_pairs_only": {
+                "n": 100,
+                "aggregate_ratio": 1.2900014183617055,
+                "max_ratio": 2.816963466128144,
+                "count_over_3x": 0,
+                "count_over_10x": 0,
+                "count_at_least_20x": 0
+              },
+              "interpretation": "Upper bounds include reserved allowances for unknown usage; not actual billable cost."
+            }
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "before": "without_qloo",
+          "after": "with_qloo",
+          "total": 100,
+          "helped": 2,
+          "hurt": 0,
+          "unchanged": 98,
+          "accuracy_difference": 0.02,
+          "difference_percentage_points": 2.0,
+          "exact_mcnemar_p_two_sided": 0.5,
+          "paired_bootstrap_95": [
+            0.0,
+            0.05
+          ],
+          "paired_bootstrap_95_percentage_points": [
+            0.0,
+            5.0
+          ]
+        }
+      ],
+      "confidence_level": 0.95,
+      "bootstrap_seed": 20261028,
+      "bootstrap_samples": 10000,
+      "cost_baseline_method": "without_qloo",
+      "full_denominator_policy": "missing and invalid answers are incorrect; unknown token usage is not zero",
+      "inference_limitations": [
+        "Wilson/paired bootstrap assume case-level independent users.",
+        "No multiple-comparison correction; primary comparisons must be prespecified."
+      ]
+    }
+  },
+  "status": "complete",
+  "sample_size": 100,
+  "selected_version": "culture_v13",
+  "evaluation_status": "one frozen confirmation",
+  "metadata": {
+    "status": "complete",
+    "title": "TasteTrail：文化偏好 Agent 的独立100例检验",
+    "created_at": "2026-10-21T15:06:48.810120+00:00",
+    "model": "glm-5.3-flash",
+    "dataset": "MovieLens1M：100名此前未使用者，严格时间边界，20/40/40互斥难度分组",
+    "protocol": "先用219开发案例选定方法；固定配置与代码后，独立100例一次检验，所有失败保留在分母。",
+    "config_sha256": "fb10700c07f15e048b8a3d0e5f1b2fd10d83f738bb9793190e89c68f06f28817",
+    "data_lock_sha256": "5e4c8e9df76bfd8946b3b733b254d96178c7243a4f6186483d97df4a27058972",
+    "source_sha256": "868f8793b490b2b2ec88ec92cfee2dcc97e3ad44522b342beff028494230c833",
+    "selected_agent": "agent_hierarchical_mixture",
+    "selected_qloo": "qloo_hierarchical_mixture",
+    "hierarchical_version": "hierarchical_v2_repair",
+    "recovery_policy": {
+      "version": "hierarchical_v2_repair",
+      "trigger": "objective invalid format or truncation only",
+      "max_extra_physical_requests": 1,
+      "reasoning_effort": "low",
+      "max_completion_tokens": 2048,
+      "total_branch_budget_multiplier": 18,
+      "both_branches": true
+    },
+    "method_descriptions": {
+      "glm": "一次GLM回答；输入相同的5部喜欢、3部不喜欢及两个候选。",
+      "agent": "开发集选定的最强无Qloo控制：agent_hierarchical_mixture。实际融合特征：glm_log_odds, mf_32_10, community_margin, bernoulli_k12_cf, bernoulli_k24_cf, hier_agent。",
+      "agent_qloo": "独立按相同开发规则选出的Qloo方案：qloo_hierarchical_mixture。实际融合特征：glm_log_odds, mf_32_10, community_margin, bernoulli_k12_qloo, bernoulli_k24_qloo, hier_qloo。结构未必与主表Agent完全相同；另用相同机制移除Qloo，并在开发集重新校准，检验文化信息增量。"
+    },
+    "limitations": [
+      "这是历史电影二选一偏好代理任务，不代表城市行程的真人满意度。",
+      "70%是项目目标，不是比赛官方达标线；100例不足以精确判断几个百分点的差异。",
+      "开发阶段尝试过多个方案；开发最高分不能当独立效果。",
+      "模型服务只提供别名，未提供可核对的权重版本指纹。",
+      "严格时间排序只约束目标用户的可见历史与候选评分；背景3640名用户使用全期评分，Qloo采用当前资料快照，因此这是回顾性偏好检验，不是全局按当年可获取信息的历史部署回测。",
+      "表中token按单条生产分支计量；实际研究还运行了多个候选和消融，研究总开销更高。确认收集遇到数值Qloo故障时仍可能保留匹配复核调用，费用比线上提前回退更保守。",
+      "主要机制消融在开发集重新校准无Qloo控制，其结构由开发集入选Qloo家庭决定；仍属条件式比较，不能替代主表独立选择的强Agent对照。",
+      "固定权重去Qloo仅保留为次要诊断；它没有重新训练融合器，输入分布可能改变，不能据此单独声称Qloo增益。",
+      "层级复核两支均执行预先登记的格式/截断恢复：仅客观无效时最多追加一次low复核，保留首次失败费用，总预算18×；合法答案不因正确性或低置信度重试。旧v2与统一恢复后的开发结果同时保留。"
+    ],
+    "official_rubric": {
+      "source_url": "https://qloo.devpost.com/",
+      "dimensions": [
+        "Implementation",
+        "Design",
+        "Potential impact",
+        "Quality of the idea"
+      ]
+    }
+  },
+  "qloo_fallback_count": 1,
+  "recovery": {
+    "agent": {
+      "attempted": 2,
+      "succeeded": 2
+    },
+    "qloo": {
+      "attempted": 3,
+      "succeeded": 3
+    }
+  },
+  "selection": {
+    "n": 219,
+    "selected_agent": {
+      "name": "agent_hierarchical_mixture",
+      "features": [
+        "glm_log_odds",
+        "mf_32_10",
+        "community_margin",
+        "bernoulli_k12_cf",
+        "bernoulli_k24_cf",
+        "hier_agent"
+      ],
+      "correct": 171,
+      "total": 219,
+      "accuracy": 0.7808219178082192,
+      "log_loss": 0.4629093950592219,
+      "inner_ridges": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "uses_qloo": false,
+      "uses_judge": false,
+      "uses_hierarchical": true,
+      "aggregate_token_upper_ratio": 4.796023564064801,
+      "maximum_token_upper_ratio": 10.77337559429477,
+      "budget_eligible": true
+    },
+    "selected_qloo": {
+      "name": "qloo_hierarchical_mixture",
+      "features": [
+        "glm_log_odds",
+        "mf_32_10",
+        "community_margin",
+        "bernoulli_k12_qloo",
+        "bernoulli_k24_qloo",
+        "hier_qloo"
+      ],
+      "correct": 172,
+      "total": 219,
+      "accuracy": 0.7853881278538812,
+      "log_loss": 0.45497080482999414,
+      "inner_ridges": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "uses_qloo": true,
+      "uses_judge": false,
+      "uses_hierarchical": true,
+      "aggregate_token_upper_ratio": 6.229455081001473,
+      "maximum_token_upper_ratio": 12.575061525840853,
+      "budget_eligible": true,
+      "degraded_fallback_cases": []
+    },
+    "matched_no_qloo": {
+      "name": "matched_no_qloo",
+      "features": [
+        "glm_log_odds",
+        "mf_32_10",
+        "community_margin",
+        "bernoulli_k12_cf",
+        "bernoulli_k24_cf",
+        "hier_agent"
+      ],
+      "selection": {
+        "name": "matched_no_qloo",
+        "features": [
+          "glm_log_odds",
+          "mf_32_10",
+          "community_margin",
+          "bernoulli_k12_cf",
+          "bernoulli_k24_cf",
+          "hier_agent"
+        ],
+        "correct": 171,
+        "total": 219,
+        "accuracy": 0.7808219178082192,
+        "log_loss": 0.4629093950592219,
+        "inner_ridges": [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0
+        ],
+        "uses_qloo": false,
+        "uses_judge": false,
+        "uses_hierarchical": true,
+        "aggregate_token_upper_ratio": 4.796023564064801,
+        "maximum_token_upper_ratio": 10.77337559429477,
+        "budget_eligible": true,
+        "conditional_on_selected_qloo_family": true,
+        "confirmation_used": false
+      },
+      "source_family": "qloo_hierarchical_mixture",
+      "source_features": [
+        "glm_log_odds",
+        "mf_32_10",
+        "community_margin",
+        "bernoulli_k12_qloo",
+        "bernoulli_k24_qloo",
+        "hier_qloo"
+      ],
+      "feature_mapping": [
+        {
+          "source": "glm_log_odds",
+          "target": "glm_log_odds",
+          "action": "keep"
+        },
+        {
+          "source": "mf_32_10",
+          "target": "mf_32_10",
+          "action": "keep"
+        },
+        {
+          "source": "community_margin",
+          "target": "community_margin",
+          "action": "keep"
+        },
+        {
+          "source": "bernoulli_k12_qloo",
+          "target": "bernoulli_k12_cf",
+          "action": "replace"
+        },
+        {
+          "source": "bernoulli_k24_qloo",
+          "target": "bernoulli_k24_cf",
+          "action": "replace"
+        },
+        {
+          "source": "hier_qloo",
+          "target": "hier_agent",
+          "action": "replace"
+        }
+      ],
+      "reused_from": "agent_hierarchical_mixture",
+      "calibration": "Same D/E-only nested ridge rule and fresh no-Qloo feature scales; exact matching Agent fits reused.",
+      "development_status": "Exploratory: mechanism conditional on the development-selected Qloo family."
+    },
+    "confirmation_used": false
+  },
+  "release_scope": "Final three-method evaluation and matched Qloo control; development trial tables are omitted from this public release. Reported confirmation metrics are unchanged."
+}

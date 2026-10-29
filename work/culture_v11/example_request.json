@@ -1,0 +1,18 @@
+{
+  "likes": [
+    {"title": "The Shawshank Redemption", "year": 1994, "rating": 5},
+    {"title": "The Godfather", "year": 1972, "rating": 5},
+    {"title": "GoodFellas", "year": 1990, "rating": 4},
+    {"title": "Pulp Fiction", "year": 1994, "rating": 5},
+    {"title": "Fargo", "year": 1996, "rating": 4}
+  ],
+  "dislikes": [
+    {"title": "Batman Forever", "year": 1995, "rating": 2},
+    {"title": "Waterworld", "year": 1995, "rating": 2},
+    {"title": "The Cable Guy", "year": 1996, "rating": 1}
+  ],
+  "candidates": [
+    {"title": "L.A. Confidential", "year": 1997},
+    {"title": "Con Air", "year": 1997}
+  ]
+}

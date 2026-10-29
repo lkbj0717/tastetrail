@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+credentials.json
+private/
+qloo_cache/
+*.npz
+
+.runtime/
+ratings.dat
+movies.dat
+ml-1m.zip
+casebook*
+features_*.json

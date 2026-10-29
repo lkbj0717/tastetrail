@@ -1,0 +1,50 @@
+TasteTrail final evaluation protocol
+
+Task
+Choose between two unseen movie candidates using five liked films (ratings 4–5)
+and three disliked films (ratings 1–2). The reference answer is an observed
+held-out preference from MovieLens 1M; it is not a model-generated label.
+
+Data separation
+3,640 disjoint background users provide numerical preference assets. The final
+method was selected using 219 development cases. The confirmation contains 100
+previously unused target users: 20 ordinary, 40 shared-genre, and 40 fine-taste
+cases. Candidate order is randomized identically for all methods. Candidate
+ratings must occur strictly after each target user's visible history boundary.
+Background ratings use the full period and Qloo is a current snapshot, so this
+is a retrospective preference benchmark rather than a historical deployment.
+
+Final conditions
+1. One GLM call using the visible ratings and basic movie metadata.
+2. Agent: initial GLM estimate, preference planner/reviewer, collaborative and
+   matrix-factor tools, and CF-smoothed 12/24-component soft taste mixtures.
+3. Agent + Qloo: the same structure with Qloo-smoothed mixtures plus candidate
+   cultural descriptions and liked/disliked-group affinities in the reviewer.
+
+All conditions share the same initial answer, candidate order and ranking-first
+parser. The planner cannot rank candidates; the reviewer does not receive the
+initial GLM preference. Missing evidence remains unknown. No hidden ratings or
+original user identifiers enter the model or Qloo requests.
+
+Reliability and accounting
+Both Agent branches allow at most one extra review for objectively invalid or
+truncated output, within an 18x conservative branch token allowance. Valid
+answers are never retried based on confidence or correctness. Original failed
+calls and recoveries are included in cost; unknown usage is not counted as zero.
+Every confirmation case remains in the denominator, including failures.
+
+Reporting
+Report the three accuracies, difficulty groups, paired differences, 10,000-sample
+paired bootstrap intervals, exact McNemar tests, token costs and fallback counts.
+The primary Qloo mechanism control replaces Qloo with matched CF/no-Qloo inputs
+and recalibrates on development data only. No confirmation labels select models,
+weights, prompts, thresholds, or fallback rules.
+
+The final aggregate results are 63/100, 68/100 and 70/100. The Qloo increment is
+2 percentage points with a paired 95% interval of -2 to +6 points and p=0.625.
+It is not statistically significant. This benchmark is not an official Qloo
+score or evidence of city-itinerary satisfaction.
+
+This file describes the final public release. Original confirmation fingerprints
+remain in research/formal_lock.json and research/confirmation_data_lock.json;
+docs/RELEASE.json distinguishes the curated release from that original snapshot.

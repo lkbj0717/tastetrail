@@ -1,0 +1,146 @@
+{
+  "n": 219,
+  "selected_agent": {
+    "name": "agent_hierarchical_mixture",
+    "features": [
+      "glm_log_odds",
+      "mf_32_10",
+      "community_margin",
+      "bernoulli_k12_cf",
+      "bernoulli_k24_cf",
+      "hier_agent"
+    ],
+    "correct": 171,
+    "total": 219,
+    "accuracy": 0.7808219178082192,
+    "log_loss": 0.4629093950592219,
+    "inner_ridges": [
+      10.0,
+      10.0,
+      10.0,
+      10.0,
+      10.0
+    ],
+    "uses_qloo": false,
+    "uses_judge": false,
+    "uses_hierarchical": true,
+    "aggregate_token_upper_ratio": 4.796023564064801,
+    "maximum_token_upper_ratio": 10.77337559429477,
+    "budget_eligible": true
+  },
+  "selected_qloo": {
+    "name": "qloo_hierarchical_mixture",
+    "features": [
+      "glm_log_odds",
+      "mf_32_10",
+      "community_margin",
+      "bernoulli_k12_qloo",
+      "bernoulli_k24_qloo",
+      "hier_qloo"
+    ],
+    "correct": 172,
+    "total": 219,
+    "accuracy": 0.7853881278538812,
+    "log_loss": 0.45497080482999414,
+    "inner_ridges": [
+      10.0,
+      10.0,
+      10.0,
+      10.0,
+      10.0
+    ],
+    "uses_qloo": true,
+    "uses_judge": false,
+    "uses_hierarchical": true,
+    "aggregate_token_upper_ratio": 6.229455081001473,
+    "maximum_token_upper_ratio": 12.575061525840853,
+    "budget_eligible": true,
+    "degraded_fallback_cases": []
+  },
+  "matched_no_qloo": {
+    "name": "matched_no_qloo",
+    "features": [
+      "glm_log_odds",
+      "mf_32_10",
+      "community_margin",
+      "bernoulli_k12_cf",
+      "bernoulli_k24_cf",
+      "hier_agent"
+    ],
+    "selection": {
+      "name": "matched_no_qloo",
+      "features": [
+        "glm_log_odds",
+        "mf_32_10",
+        "community_margin",
+        "bernoulli_k12_cf",
+        "bernoulli_k24_cf",
+        "hier_agent"
+      ],
+      "correct": 171,
+      "total": 219,
+      "accuracy": 0.7808219178082192,
+      "log_loss": 0.4629093950592219,
+      "inner_ridges": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "uses_qloo": false,
+      "uses_judge": false,
+      "uses_hierarchical": true,
+      "aggregate_token_upper_ratio": 4.796023564064801,
+      "maximum_token_upper_ratio": 10.77337559429477,
+      "budget_eligible": true,
+      "conditional_on_selected_qloo_family": true,
+      "confirmation_used": false
+    },
+    "source_family": "qloo_hierarchical_mixture",
+    "source_features": [
+      "glm_log_odds",
+      "mf_32_10",
+      "community_margin",
+      "bernoulli_k12_qloo",
+      "bernoulli_k24_qloo",
+      "hier_qloo"
+    ],
+    "feature_mapping": [
+      {
+        "source": "glm_log_odds",
+        "target": "glm_log_odds",
+        "action": "keep"
+      },
+      {
+        "source": "mf_32_10",
+        "target": "mf_32_10",
+        "action": "keep"
+      },
+      {
+        "source": "community_margin",
+        "target": "community_margin",
+        "action": "keep"
+      },
+      {
+        "source": "bernoulli_k12_qloo",
+        "target": "bernoulli_k12_cf",
+        "action": "replace"
+      },
+      {
+        "source": "bernoulli_k24_qloo",
+        "target": "bernoulli_k24_cf",
+        "action": "replace"
+      },
+      {
+        "source": "hier_qloo",
+        "target": "hier_agent",
+        "action": "replace"
+      }
+    ],
+    "reused_from": "agent_hierarchical_mixture",
+    "calibration": "Same D/E-only nested ridge rule and fresh no-Qloo feature scales; exact matching Agent fits reused.",
+    "development_status": "Exploratory: mechanism conditional on the development-selected Qloo family."
+  },
+  "confirmation_used": false
+}
