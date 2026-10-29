@@ -39,6 +39,10 @@
     "sha256": "72d9ab61a7126ac1359c87720d5dd90087664ff268eddb7c5e69f4b0f3d59343",
     "bytes": 311
   },
+  "components.json": {
+    "sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd",
+    "bytes": 420
+  },
   "components/connector-error.tsx": {
     "sha256": "2d0d04559952ce9c9a327cca499f4b99f35d885cccfce375230e116695d3f155",
     "bytes": 1082
@@ -287,10 +291,6 @@
     "sha256": "a0784eb77831a799fad7991df4f1b666f876201565a80175e1aa68733574a2e4",
     "bytes": 1830
   },
-  "components.json": {
-    "sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd",
-    "bytes": 420
-  },
   "db/index.ts": {
     "sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd",
     "bytes": 423
@@ -299,13 +299,13 @@
     "sha256": "13ddacbf0be50e054d450a6c642b7fdc1aa943fd6b99084711e07e58b600390d",
     "bytes": 169
   },
-  "drizzle/meta/_journal.json": {
-    "sha256": "90cb374e093894d0efce6f1830d873a42aadd8ba49d2f024495e5cb2e1c8c303",
-    "bytes": 61
-  },
   "drizzle.config.ts": {
     "sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b",
     "bytes": 148
+  },
+  "drizzle/meta/_journal.json": {
+    "sha256": "90cb374e093894d0efce6f1830d873a42aadd8ba49d2f024495e5cb2e1c8c303",
+    "bytes": 61
   },
   "eslint.config.mjs": {
     "sha256": "eeda7faabe9560fa9fdb26675b0011fa78461ca7061989732f5da9245b87e315",
@@ -366,6 +366,10 @@
   "public/favicon.svg": {
     "sha256": "03bd76e4bb6951631b3dbc46f65f7c8e97d1ab66a5f4e414deafea611bd831b4",
     "bytes": 587
+  },
+  "public/tastetrail-cinema-hero.webp": {
+    "sha256": "e544c7e80623aef8abbca594cd7fd8cccc844f7bdf7d5bd9348aee4f015eb721",
+    "bytes": 82502
   },
   "public/tastetrail-mark.svg": {
     "sha256": "03bd76e4bb6951631b3dbc46f65f7c8e97d1ab66a5f4e414deafea611bd831b4",
@@ -468,8 +472,8 @@
     "bytes": 2673
   },
   "worker/assets/demo.html": {
-    "sha256": "b2335ecc56ab9759fbae8b1c4ec8c33055a9c2cc5915af6b8fa5acd2af484615",
-    "bytes": 52028
+    "sha256": "37430f4bf43787bf1adfbde0b0773c695eff842c0bf14446cd62f5e690982445",
+    "bytes": 61246
   },
   "worker/index.ts": {
     "sha256": "f9fe4cf13a2814104f02511f42a467dbb2fdc53e45b173cdebcdeed5a9d484e5",
