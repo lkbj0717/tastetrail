@@ -468,8 +468,8 @@
     "bytes": 2673
   },
   "worker/assets/demo.html": {
-    "sha256": "e049f480e7a3197667545c01ac9affb2e21f0f0c5cd41b98f4b91a9301605f2f",
-    "bytes": 26973
+    "sha256": "b2335ecc56ab9759fbae8b1c4ec8c33055a9c2cc5915af6b8fa5acd2af484615",
+    "bytes": 52028
   },
   "worker/index.ts": {
     "sha256": "f9fe4cf13a2814104f02511f42a467dbb2fdc53e45b173cdebcdeed5a9d484e5",
