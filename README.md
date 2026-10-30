@@ -8,6 +8,12 @@ Public demo: **https://tastetrail-qloo-agent.shared-json.chatgpt.site**
 
 Repository: **https://github.com/lkbj0717/tastetrail**
 
+## Inspect and keep a recommendation
+
+After comparison, the **decision receipt** shows whether Agent + Qloo selected a different film from the Agent without Qloo. It lists cultural support **and** counterevidence, and visualizes the additive contributions that reconstruct the frozen fusion score. Missing evidence and fallback states remain explicit. These values are neither personal satisfaction probabilities nor a causal Qloo ablation.
+
+Visitors can save the recommendation and their entered ratings as a local text file, or revisit their ratings and compare again. Receipt generation adds no model or Qloo requests and does not change the recommendation. A read-only replay of all 100 archived confirmation cases preserved every prediction for all three methods; this is a regression check, not a new accuracy study.
+
 ## Why this problem
 
 Two people may enjoy the same crime film for different reasons: intricate characters, atmosphere, social themes, or action. A genre label alone cannot establish their preference. A language model can suggest plausible explanations, but eight ratings do not reveal a person's motives with certainty.

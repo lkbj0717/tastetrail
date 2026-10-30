@@ -212,8 +212,8 @@
     "sha256": "175b3e9c95cdf84eeffe786e2a6327c0c19d13e2a362bcdaf4ff9b5a8df06282"
   },
   "work/culture_v13/service_v13.py": {
-    "bytes": 38549,
-    "sha256": "f84696fdf9d5b6b1f36091661afe4b057b7f8006403d83ea04a15f3baa9992ff"
+    "bytes": 39102,
+    "sha256": "d41f418213a2698d860dbc46329f2179f2c9d978d49b61026709e174bc5f4be3"
   },
   "work/culture_v13/test_affinity_graph.py": {
     "bytes": 1281,
@@ -278,5 +278,13 @@
   "work/culture_v13/test_service_v13.py": {
     "bytes": 19616,
     "sha256": "a87457b313798a5c6148448aa3e7e5940f38789c1e6d582f160e224d3a216fb3"
+  },
+  "work/culture_v13/decision_receipt.py": {
+    "bytes": 7582,
+    "sha256": "9b15ee4061a773e7ff52139f54e981ee77d8c0324d689da3c5af5bcb06c037a3"
+  },
+  "work/culture_v13/test_decision_receipt.py": {
+    "bytes": 3472,
+    "sha256": "5c8128d932586bb14a763746847d41e8f11640245199467bc6507f68e909937b"
   }
 }

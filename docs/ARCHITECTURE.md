@@ -81,3 +81,9 @@ The system is an engineering combination of established ideas, with attribution.
 - [Automated Composition of Agents, NeurIPS 2025](https://papers.nips.cc/paper_files/paper/2025/hash/39c51d0fe64c273413a4d358361b3daa-Abstract-Conference.html) motivates evaluating component utility together with cost. Our selection is development-only and frozen before confirmation; it is not an online knapsack agent.
 
 Only the implemented components and their relevant influences are documented here. The public `agent_config.json` contains the selected Agent and Agent + Qloo configurations, with the same numerical parameters as the final confirmation experiment.
+
+## Read-only decision receipt
+
+`work/culture_v13/decision_receipt.py` runs after inference. It verifies each numeric input, reconstructs the selected fusion score from normalized features and frozen coefficients, and publishes grouped additive contributions only when that reconstruction matches the returned score. Contributions are oriented toward the selected candidate. They are model-score units, not percentages or causal effects. A fallback reconstructs the configured fallback calculation, without claiming Qloo improved it.
+
+The cultural ledger treats a stronger association with liked seeds as support and with disliked seeds as counterevidence. Seed IDs must belong to the correct visible rating group. Missing or invalid affinities remain unavailable; a valid zero stays zero. This ledger describes observations and is separate from the learned fusion account. If receipt construction fails, the already completed recommendation is preserved. All visible strings use text nodes in the browser. The optional download is a local text file containing the submitted film ratings; it does not publish those ratings.

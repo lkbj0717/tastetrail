@@ -553,7 +553,7 @@ class RecommendationService:
             warnings.append("Complete token usage or its conservative bound is unavailable; compliance with the 20× token budget cannot be established.")
         elif ratio_upper >= 20:
             warnings.append("This configuration exceeded the 20× conservative token budget and should not be presented as the final efficient version.")
-        return {"recommendations": recommendations, "explanations": explanations,
+        response = {"recommendations": recommendations, "explanations": explanations,
                 "probabilities": result["probabilities"], "selected_version": self.version,
                 "configuration_frozen": self.frozen, "comparison_requested": bool(compare),
                 "trace": trace, "qloo_evidence": qdata["evidence"], "costs": costs,
@@ -567,6 +567,16 @@ class RecommendationService:
                 "scope": {"catalog_size": len(self.metadata), "task": "Two-candidate movie preference comparison",
                           "city_itinerary_validated": False},
                 "scores_are_personal_probabilities": False}
+        # Optional explanation is downstream of the frozen decision and costs.
+        from decision_receipt import build_receipt
+        try:
+            response["decision_receipt"] = build_receipt(response, result, self.config,
+                qdata["values"], initial, judges, hierarchical)
+        except (KeyError, TypeError, ValueError, OverflowError):
+            response["decision_receipt"] = {"available": False,
+                "summary": "The decision receipt is unavailable; the recommendation is unchanged."}
+        return response
+
 
 
 def recommend(body, compare=True):

@@ -89,3 +89,7 @@ The [bootstrap guide](../README.md#build-or-check-runtime-assets) builds serving
 Primary evidence: [confirmation_report.json](../work/culture_v13/research/confirmation_report.json), [formal_lock.json](../work/culture_v13/research/formal_lock.json), [confirmation_data_lock.json](../work/culture_v13/research/confirmation_data_lock.json), and the [selected-method record](../work/culture_v13/research/final_development_selection.json). The public evidence focuses on the final methods. Earlier reused test scores are not counted as new independent results.
 
 Dataset source: [GroupLens MovieLens 1M](https://grouplens.org/datasets/movielens/1m/). Competition context: [Qloo Agentic Hackathon](https://qloo.devpost.com/). The official product judging dimensions and this custom technical benchmark are distinct.
+
+## Product regression, October 30, 2026
+
+The decision-receipt update was checked by replaying the 100 archived confirmation decisions with their original features and model responses. All three methods retained every prediction (historical correct counts: 63, 68, 70); all 100 additive score accounts reconstructed successfully, including the recorded fallback case. Model parameters, prompts, and inference logic were unchanged. No labels were used for tuning and no new provider calls were required for this replay. This check establishes non-interference on the archive, not improved accuracy or a new independent evaluation. Live upstream services remain mutable.

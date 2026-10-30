@@ -14,5 +14,13 @@
     "runtime_common.py": "Only the shared path constants and JSON read/save helpers were extracted from an earlier experiment runner; bootstrap imports this module.",
     "matched_control.py": "Final matched-control feature mapping and recalibration functions retained without method-family search."
   },
-  "historical_replay_cli_included": false
+  "historical_replay_cli_included": false,
+  "decision_receipt": {
+    "post_inference_only": true,
+    "adds_provider_calls": false,
+    "archived_cases": 100,
+    "all_three_predictions_unchanged": true,
+    "verified_fusion_accounts": 100,
+    "new_independent_accuracy_claim": false
+  }
 }
